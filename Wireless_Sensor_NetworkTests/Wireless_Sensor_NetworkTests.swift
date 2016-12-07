@@ -24,7 +24,7 @@ class Wireless_Sensor_NetworkTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let d = 10; let nV:Int = 400
+        let d = 10; let nV:Int = 4000
         let testDisk = Disk(avgDegree: d, numberOfVertices: nV)
         print("avgDegree = ", testDisk.avgDegree)
         let testSphere = Sphere(avgDegree: d, numberOfVertices: nV)
