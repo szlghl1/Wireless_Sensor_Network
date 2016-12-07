@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "456025E91DF7F7AF00E86E1D"
+               BuildableName = "Wireless_Sensor_Network.app"
+               BlueprintName = "Wireless_Sensor_Network"
+               ReferencedContainer = "container:Wireless_Sensor_Network.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "456025FD1DF7F7AF00E86E1D"
+               BuildableName = "Wireless_Sensor_NetworkTests.xctest"
+               BlueprintName = "Wireless_Sensor_NetworkTests"
+               ReferencedContainer = "container:Wireless_Sensor_Network.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "456025E91DF7F7AF00E86E1D"
+            BuildableName = "Wireless_Sensor_Network.app"
+            BlueprintName = "Wireless_Sensor_Network"
+            ReferencedContainer = "container:Wireless_Sensor_Network.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +61,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "456025E91DF7F7AF00E86E1D"
+            BuildableName = "Wireless_Sensor_Network.app"
+            BlueprintName = "Wireless_Sensor_Network"
+            ReferencedContainer = "container:Wireless_Sensor_Network.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +80,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "456025E91DF7F7AF00E86E1D"
+            BuildableName = "Wireless_Sensor_Network.app"
+            BlueprintName = "Wireless_Sensor_Network"
+            ReferencedContainer = "container:Wireless_Sensor_Network.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

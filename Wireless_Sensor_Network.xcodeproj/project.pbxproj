@@ -13,6 +13,12 @@
 		456025F51DF7F7AF00E86E1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456025F41DF7F7AF00E86E1D /* Assets.xcassets */; };
 		456025F81DF7F7AF00E86E1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456025F61DF7F7AF00E86E1D /* LaunchScreen.storyboard */; };
 		456026031DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026021DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.swift */; };
+		456026111DF7F7F900E86E1D /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560260E1DF7F7F900E86E1D /* Disk.swift */; };
+		456026121DF7F7F900E86E1D /* RGG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560260F1DF7F7F900E86E1D /* RGG.swift */; };
+		456026131DF7F7F900E86E1D /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026101DF7F7F900E86E1D /* Vertex.swift */; };
+		456026151DF8000400E86E1D /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026141DF8000400E86E1D /* Random.swift */; };
+		456026171DF80F4E00E86E1D /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026161DF80F4E00E86E1D /* Square.swift */; };
+		456026191DF8107200E86E1D /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026181DF8107200E86E1D /* Sphere.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		456025FE1DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wireless_Sensor_NetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		456026021DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireless_Sensor_NetworkTests.swift; sourceTree = "<group>"; };
 		456026041DF7F7AF00E86E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4560260E1DF7F7F900E86E1D /* Disk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
+		4560260F1DF7F7F900E86E1D /* RGG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGG.swift; sourceTree = "<group>"; };
+		456026101DF7F7F900E86E1D /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		456026141DF8000400E86E1D /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		456026161DF80F4E00E86E1D /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
+		456026181DF8107200E86E1D /* Sphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,7 @@
 		456025EC1DF7F7AF00E86E1D /* Wireless_Sensor_Network */ = {
 			isa = PBXGroup;
 			children = (
+				4560260D1DF7F7E600E86E1D /* GraphModel */,
 				456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */,
 				456025EF1DF7F7AF00E86E1D /* ViewController.swift */,
 				456025F11DF7F7AF00E86E1D /* Main.storyboard */,
@@ -94,6 +107,19 @@
 				456026041DF7F7AF00E86E1D /* Info.plist */,
 			);
 			path = Wireless_Sensor_NetworkTests;
+			sourceTree = "<group>";
+		};
+		4560260D1DF7F7E600E86E1D /* GraphModel */ = {
+			isa = PBXGroup;
+			children = (
+				4560260E1DF7F7F900E86E1D /* Disk.swift */,
+				4560260F1DF7F7F900E86E1D /* RGG.swift */,
+				456026101DF7F7F900E86E1D /* Vertex.swift */,
+				456026141DF8000400E86E1D /* Random.swift */,
+				456026161DF80F4E00E86E1D /* Square.swift */,
+				456026181DF8107200E86E1D /* Sphere.swift */,
+			);
+			name = GraphModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +225,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456026121DF7F7F900E86E1D /* RGG.swift in Sources */,
+				456026111DF7F7F900E86E1D /* Disk.swift in Sources */,
+				456026151DF8000400E86E1D /* Random.swift in Sources */,
+				456026171DF80F4E00E86E1D /* Square.swift in Sources */,
 				456025F01DF7F7AF00E86E1D /* ViewController.swift in Sources */,
+				456026131DF7F7F900E86E1D /* Vertex.swift in Sources */,
+				456026191DF8107200E86E1D /* Sphere.swift in Sources */,
 				456025EE1DF7F7AF00E86E1D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +422,7 @@
 				456026091DF7F7AF00E86E1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4560260A1DF7F7AF00E86E1D /* Build configuration list for PBXNativeTarget "Wireless_Sensor_NetworkTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +431,7 @@
 				4560260C1DF7F7AF00E86E1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
