@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		456025EE1DF7F7AF00E86E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */; };
+		456025F01DF7F7AF00E86E1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456025EF1DF7F7AF00E86E1D /* ViewController.swift */; };
+		456025F31DF7F7AF00E86E1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456025F11DF7F7AF00E86E1D /* Main.storyboard */; };
+		456025F51DF7F7AF00E86E1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456025F41DF7F7AF00E86E1D /* Assets.xcassets */; };
+		456025F81DF7F7AF00E86E1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456025F61DF7F7AF00E86E1D /* LaunchScreen.storyboard */; };
+		456026031DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026021DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		456025FF1DF7F7AF00E86E1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 456025E21DF7F7AF00E86E1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 456025E91DF7F7AF00E86E1D;
+			remoteInfo = Wireless_Sensor_Network;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		456025EA1DF7F7AF00E86E1D /* Wireless_Sensor_Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wireless_Sensor_Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		456025EF1DF7F7AF00E86E1D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		456025F21DF7F7AF00E86E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		456025F41DF7F7AF00E86E1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		456025F71DF7F7AF00E86E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		456025F91DF7F7AF00E86E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		456025FE1DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wireless_Sensor_NetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		456026021DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireless_Sensor_NetworkTests.swift; sourceTree = "<group>"; };
+		456026041DF7F7AF00E86E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		456025E71DF7F7AF00E86E1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456025FB1DF7F7AF00E86E1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		456025E11DF7F7AF00E86E1D = {
+			isa = PBXGroup;
+			children = (
+				456025EC1DF7F7AF00E86E1D /* Wireless_Sensor_Network */,
+				456026011DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests */,
+				456025EB1DF7F7AF00E86E1D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		456025EB1DF7F7AF00E86E1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				456025EA1DF7F7AF00E86E1D /* Wireless_Sensor_Network.app */,
+				456025FE1DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		456025EC1DF7F7AF00E86E1D /* Wireless_Sensor_Network */ = {
+			isa = PBXGroup;
+			children = (
+				456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */,
+				456025EF1DF7F7AF00E86E1D /* ViewController.swift */,
+				456025F11DF7F7AF00E86E1D /* Main.storyboard */,
+				456025F41DF7F7AF00E86E1D /* Assets.xcassets */,
+				456025F61DF7F7AF00E86E1D /* LaunchScreen.storyboard */,
+				456025F91DF7F7AF00E86E1D /* Info.plist */,
+			);
+			path = Wireless_Sensor_Network;
+			sourceTree = "<group>";
+		};
+		456026011DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				456026021DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.swift */,
+				456026041DF7F7AF00E86E1D /* Info.plist */,
+			);
+			path = Wireless_Sensor_NetworkTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		456025E91DF7F7AF00E86E1D /* Wireless_Sensor_Network */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 456026071DF7F7AF00E86E1D /* Build configuration list for PBXNativeTarget "Wireless_Sensor_Network" */;
+			buildPhases = (
+				456025E61DF7F7AF00E86E1D /* Sources */,
+				456025E71DF7F7AF00E86E1D /* Frameworks */,
+				456025E81DF7F7AF00E86E1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wireless_Sensor_Network;
+			productName = Wireless_Sensor_Network;
+			productReference = 456025EA1DF7F7AF00E86E1D /* Wireless_Sensor_Network.app */;
+			productType = "com.apple.product-type.application";
+		};
+		456025FD1DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4560260A1DF7F7AF00E86E1D /* Build configuration list for PBXNativeTarget "Wireless_Sensor_NetworkTests" */;
+			buildPhases = (
+				456025FA1DF7F7AF00E86E1D /* Sources */,
+				456025FB1DF7F7AF00E86E1D /* Frameworks */,
+				456025FC1DF7F7AF00E86E1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				456026001DF7F7AF00E86E1D /* PBXTargetDependency */,
+			);
+			name = Wireless_Sensor_NetworkTests;
+			productName = Wireless_Sensor_NetworkTests;
+			productReference = 456025FE1DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		456025E21DF7F7AF00E86E1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "凌何";
+				TargetAttributes = {
+					456025E91DF7F7AF00E86E1D = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 5RYTR92489;
+					};
+					456025FD1DF7F7AF00E86E1D = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 5RYTR92489;
+						TestTargetID = 456025E91DF7F7AF00E86E1D;
+					};
+				};
+			};
+			buildConfigurationList = 456025E51DF7F7AF00E86E1D /* Build configuration list for PBXProject "Wireless_Sensor_Network" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 456025E11DF7F7AF00E86E1D;
+			productRefGroup = 456025EB1DF7F7AF00E86E1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				456025E91DF7F7AF00E86E1D /* Wireless_Sensor_Network */,
+				456025FD1DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		456025E81DF7F7AF00E86E1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456025F81DF7F7AF00E86E1D /* LaunchScreen.storyboard in Resources */,
+				456025F51DF7F7AF00E86E1D /* Assets.xcassets in Resources */,
+				456025F31DF7F7AF00E86E1D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456025FC1DF7F7AF00E86E1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		456025E61DF7F7AF00E86E1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456025F01DF7F7AF00E86E1D /* ViewController.swift in Sources */,
+				456025EE1DF7F7AF00E86E1D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		456025FA1DF7F7AF00E86E1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456026031DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		456026001DF7F7AF00E86E1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 456025E91DF7F7AF00E86E1D /* Wireless_Sensor_Network */;
+			targetProxy = 456025FF1DF7F7AF00E86E1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		456025F11DF7F7AF00E86E1D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				456025F21DF7F7AF00E86E1D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		456025F61DF7F7AF00E86E1D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				456025F71DF7F7AF00E86E1D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		456026051DF7F7AF00E86E1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		456026061DF7F7AF00E86E1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		456026081DF7F7AF00E86E1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Wireless_Sensor_Network/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "heling.Wireless-Sensor-Network";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		456026091DF7F7AF00E86E1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Wireless_Sensor_Network/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "heling.Wireless-Sensor-Network";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4560260B1DF7F7AF00E86E1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Wireless_Sensor_NetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "heling.Wireless-Sensor-NetworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wireless_Sensor_Network.app/Wireless_Sensor_Network";
+			};
+			name = Debug;
+		};
+		4560260C1DF7F7AF00E86E1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Wireless_Sensor_NetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "heling.Wireless-Sensor-NetworkTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wireless_Sensor_Network.app/Wireless_Sensor_Network";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		456025E51DF7F7AF00E86E1D /* Build configuration list for PBXProject "Wireless_Sensor_Network" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				456026051DF7F7AF00E86E1D /* Debug */,
+				456026061DF7F7AF00E86E1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		456026071DF7F7AF00E86E1D /* Build configuration list for PBXNativeTarget "Wireless_Sensor_Network" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				456026081DF7F7AF00E86E1D /* Debug */,
+				456026091DF7F7AF00E86E1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4560260A1DF7F7AF00E86E1D /* Build configuration list for PBXNativeTarget "Wireless_Sensor_NetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4560260B1DF7F7AF00E86E1D /* Debug */,
+				4560260C1DF7F7AF00E86E1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 456025E21DF7F7AF00E86E1D /* Project object */;
+}
