@@ -11,7 +11,8 @@ public class Vertex {
     public let x:Double, y:Double, z:Double
     public let id:Int
     public var color:Int = 0
-    public var adjArray:[Int]
+    public var adjArray = [Int]()
+    public var degree = 0
     
     init(id:Int, x:Double, y:Double, z:Double = 0)
     {
@@ -19,6 +20,5 @@ public class Vertex {
         self.x = x
         self.y = y
         self.z = z
-        adjArray = [Int]()
     }
 }

@@ -14,19 +14,19 @@ public class RGG {
     public var vertices = [Vertex]()
     let radius:Double
     let nVertices:Int//number of vertices
-    var nEdges:Int
+    lazy var nEdges:Int =
     {
         var n:Int = 0
-        for v in vertices
+        for v in self.vertices
         {
             n += v.adjArray.count
         }
         n /= 2
         return n
-    }
-    var avgDegree:Double{
-        return Double(nEdges*2) / Double(nVertices)
-    }
+    }()
+    lazy var avgDegree:Double = {
+        return Double(self.nEdges*2) / Double(self.nVertices)
+    }()
     
     init(r:Double, numberOfVertices:Int)
     {
@@ -62,6 +62,8 @@ public class RGG {
                 {
                     copyVertices[i].adjArray.append(copyVertices[j].id)
                     copyVertices[j].adjArray.append(copyVertices[i].id)
+                    copyVertices[i].degree++
+                    copyVertices[j].degree++
                 }
                 j--
             }
