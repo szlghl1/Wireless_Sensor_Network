@@ -28,12 +28,15 @@ class Wireless_Sensor_NetworkTests: XCTestCase {
         let testDisk = Disk(avgDegree: d, numberOfVertices: nV)
         XCTAssert(testDisk.avgDegree > lowerD && testDisk.avgDegree < upperD)
         print("avgDegree = ", testDisk.avgDegree)
+        print("num of used color = ", testDisk.numColor)
         let testSphere = Sphere(avgDegree: d, numberOfVertices: nV)
         XCTAssert(testSphere.avgDegree > lowerD && testSphere.avgDegree < upperD)
         print("avgDegree = ", testSphere.avgDegree)
+        print("num of used color = ", testSphere.numColor)
         let testSquare = Square(avgDegree: d, numberOfVertices: nV)
         XCTAssert(testSquare.avgDegree > lowerD && testSquare.avgDegree < upperD)
         print("avgDegree = ", testSquare.avgDegree)
+        print("num of used color = ", testSquare.numColor)
     }
     
     func testPerformanceExample() {

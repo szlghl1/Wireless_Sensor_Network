@@ -19,6 +19,7 @@
 		456026151DF8000400E86E1D /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026141DF8000400E86E1D /* Random.swift */; };
 		456026171DF80F4E00E86E1D /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026161DF80F4E00E86E1D /* Square.swift */; };
 		456026191DF8107200E86E1D /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026181DF8107200E86E1D /* Sphere.swift */; };
+		4560261B1DF81F1400E86E1D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560261A1DF81F1400E86E1D /* Stack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		456026141DF8000400E86E1D /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		456026161DF80F4E00E86E1D /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		456026181DF8107200E86E1D /* Sphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
+		4560261A1DF81F1400E86E1D /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				456026141DF8000400E86E1D /* Random.swift */,
 				456026161DF80F4E00E86E1D /* Square.swift */,
 				456026181DF8107200E86E1D /* Sphere.swift */,
+				4560261A1DF81F1400E86E1D /* Stack.swift */,
 			);
 			name = GraphModel;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				456026121DF7F7F900E86E1D /* RGG.swift in Sources */,
+				4560261B1DF81F1400E86E1D /* Stack.swift in Sources */,
 				456026111DF7F7F900E86E1D /* Disk.swift in Sources */,
 				456026151DF8000400E86E1D /* Random.swift in Sources */,
 				456026171DF80F4E00E86E1D /* Square.swift in Sources */,

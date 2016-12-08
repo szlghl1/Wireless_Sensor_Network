@@ -13,9 +13,10 @@ public class Disk: RGG
     public init(avgDegree: Int, numberOfVertices: Int)
     {
         let r = sqrt(Double(avgDegree) / Double(numberOfVertices))
-        super.init(r: r, numberOfVertices: numberOfVertices)
+        super.init(r: r, numberOfVertices: numberOfVertices)        
         createVertices()
         createEdges()
+        color()
     }
     
     //create vertices in unit disk(r = 1)

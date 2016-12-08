@@ -27,6 +27,17 @@ public class RGG {
     lazy var avgDegree:Double = {
         return Double(self.nEdges*2) / Double(self.nVertices)
     }()
+    lazy var numColor:Int = {
+        var maxColor = 0
+        for v in self.vertices
+        {
+            if v.color > maxColor
+            {
+                maxColor = v.color
+            }
+        }
+        return maxColor + 1
+    }()
     
     init(r:Double, numberOfVertices:Int)
     {
@@ -60,23 +71,17 @@ public class RGG {
             {
                 if(ifAdajacent(copyVertices[i], v2: copyVertices[j]))
                 {
-                    copyVertices[i].adjArray.append(copyVertices[j].id)
-                    copyVertices[j].adjArray.append(copyVertices[i].id)
-                    copyVertices[i].degree++
-                    copyVertices[j].degree++
+                    //it works both for element in copyVertices is copy and reference of ele in vertices
+                    let id_i = copyVertices[i].id
+                    let id_j = copyVertices[j].id
+                    vertices[id_i].adjArray.append(id_j)
+                    vertices[id_j].adjArray.append(id_i)
+                    vertices[id_i].degree++
+                    vertices[id_j].degree++
                 }
                 j--
             }
             j = i + 1
-//            Brute-force
-//            for j in 0...(i-1)
-//            {
-//                if(ifAdajacent(copyVertices[i], v2: copyVertices[j]))
-//                {
-//                    copyVertices[i].adjArray.append(copyVertices[j].id)
-//                    copyVertices[j].adjArray.append(copyVertices[i].id)
-//                }
-//            }
         }
     }
     
@@ -88,5 +93,96 @@ public class RGG {
     {
         let disSq = square(v1.x - v2.x) + square(v1.y - v2.y) + square(v1.z - v2.z)
         return disSq <= square(radius)
+    }
+    
+    //the return stack contains dulipcate of vertices after smallest-last-order
+    func getSmallestLastOrder() -> Stack<Vertex>
+    {
+        var s = Stack<Vertex>()
+        var verticesIndex = [Vertex]()
+        var maxDegree = 0
+        //initialize maxDegree and verticesIndex
+        for v in vertices
+        {
+            verticesIndex.append(v.copy())
+            if(v.degree > maxDegree)
+            {
+                maxDegree = v.degree
+            }
+        }
+        
+        var degreeArray = Array(count: maxDegree + 1, repeatedValue: [Vertex]())
+        for v in verticesIndex
+        {
+            degreeArray[v.degree].append(v)
+        }
+        
+        let firstNonEmptyDegree = {
+            () -> Int in
+            for i in 0...(degreeArray.count - 1)
+            {
+                if(degreeArray[i].count > 0)
+                {
+                    return i
+                }
+            }
+            return -1
+        }
+        let removeVertex = {
+            (v: Vertex) in
+            for i in v.adjArray
+            {
+                let curAdjV = verticesIndex[i]
+                degreeArray[curAdjV.degree] = degreeArray[curAdjV.degree].filter({$0.id != curAdjV.id})
+                curAdjV.deleteAdjByID(v.id)
+                degreeArray[curAdjV.degree].append(curAdjV)
+            }
+            return
+        }
+        for _ in 0...(vertices.count - 1)
+        {
+            let i = firstNonEmptyDegree()
+            let v = degreeArray[i][0]
+            removeVertex(v)
+            s.push(v)
+            degreeArray[i].removeAtIndex(0)
+        }
+        return s
+    }
+    
+    /*********************************************
+    //color the vertices in the order given by a stack
+    //color the vertices from the top to bottom of the stack
+    *********************************************/
+    func color()
+    {
+        var s = getSmallestLastOrder()
+        let firstAvalibleColor =
+        {
+            (v: Vertex) -> Int in
+            if v.adjArray.count == 0
+            {
+                return 0
+            }
+            var usedColor = [Int]()
+            for adjID in v.adjArray
+            {
+                usedColor.append(self.vertices[adjID].color)
+            }
+            usedColor.sortInPlace()
+            for i in 0...usedColor.count - 1
+            {
+                if usedColor[i] != i
+                {
+                    return i
+                }
+            }
+            return usedColor.last!
+        }
+        for _ in 0...s.items.count - 1
+        {
+            let v = s.pop()
+            vertices[v.id].color = firstAvalibleColor(v)
+        }
     }
 }

@@ -16,6 +16,7 @@ public class Square: RGG
         super.init(r: r, numberOfVertices: numberOfVertices)
         createVertices()
         createEdges()
+        color()
     }
     
     //create vertices in unit square (x in [0,1], y in [0,1])

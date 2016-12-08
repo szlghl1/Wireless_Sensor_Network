@@ -21,4 +21,24 @@ public class Vertex {
         self.y = y
         self.z = z
     }
+    
+    init(_ v:Vertex)
+    {
+        self.x = v.x; self.y = v.y; self.z = v.z;
+        self.id = v.id
+        self.color = v.color
+        self.adjArray = v.adjArray
+        self.degree = v.degree
+    }
+    
+    func copy() -> Vertex
+    {
+        return Vertex(self)
+    }
+    
+    func deleteAdjByID(id:Int)
+    {
+        self.adjArray = self.adjArray.filter({$0 != id})
+        self.degree--
+    }
 }

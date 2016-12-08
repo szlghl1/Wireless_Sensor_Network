@@ -16,6 +16,7 @@ public class Sphere: RGG
         super.init(r: r, numberOfVertices: numberOfVertices)
         createVertices()
         createEdges()
+        color()
     }
     
     //create vertices in unit sphere (x, y, z in [-1,1])
