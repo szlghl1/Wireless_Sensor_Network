@@ -2,8 +2,8 @@
 //  Vertex.swift
 //  Wireless Sensor Network
 //
-//  Created by 凌何 on 16/12/6.
-//  Copyright © 2016年 凌何. All rights reserved.
+//  Created by LingHe on 16/12/6.
+//  Copyright © 2016 LingHe. All rights reserved.
 //
 
 import Foundation

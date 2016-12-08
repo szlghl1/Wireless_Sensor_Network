@@ -2,8 +2,8 @@
 //  Square.swift
 //  Wireless_Sensor_Network
 //
-//  Created by 凌何 on 16/12/7.
-//  Copyright © 2016年 凌何. All rights reserved.
+//  Created by LingHe on 16/12/7.
+//  Copyright © 2016 LingHe. All rights reserved.
 //
 
 import Foundation
