@@ -12,7 +12,7 @@ public class Square: RGG
 {
     public init(avgDegree: Int, numberOfVertices: Int)
     {
-        let r = sqrt(Double(avgDegree) / (M_PI * Double(numberOfVertices)))
+        let r = sqrt(Float(avgDegree) / (Float(M_PI) * Float(numberOfVertices)))
         super.init(r: r, numberOfVertices: numberOfVertices)
         createVertices()
         createEdges()
@@ -24,8 +24,8 @@ public class Square: RGG
     {
         for i in 0...(nVertices-1)
         {
-            let x = Double.random(0, max: 1)
-            let y = Double.random(0, max: 1)
+            let x = Float.random(0, max: 1)
+            let y = Float.random(0, max: 1)
             let v = Vertex(id: i, x: x, y: y)
             vertices.append(v)
         }

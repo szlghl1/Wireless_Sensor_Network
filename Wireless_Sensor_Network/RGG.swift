@@ -8,11 +8,11 @@
 
 import Foundation
 
-func square(a:Double) -> Double {return a * a}
+func square(a:Float) -> Float {return a * a}
 
 public class RGG {
     public var vertices = [Vertex]()
-    let radius:Double
+    let radius:Float
     let nVertices:Int//number of vertices
     lazy var nEdges:Int =
     {
@@ -24,8 +24,8 @@ public class RGG {
         n /= 2
         return n
     }()
-    lazy var avgDegree:Double = {
-        return Double(self.nEdges*2) / Double(self.nVertices)
+    lazy var avgDegree:Float = {
+        return Float(self.nEdges*2) / Float(self.nVertices)
     }()
     lazy var numColor:Int = {
         var maxColor = 0
@@ -39,7 +39,7 @@ public class RGG {
         return maxColor + 1
     }()
     
-    init(r:Double, numberOfVertices:Int)
+    init(r:Float, numberOfVertices:Int)
     {
         if(r < 0 || numberOfVertices < 1)
         {

@@ -12,7 +12,7 @@ public class Sphere: RGG
 {
     public init(avgDegree: Int, numberOfVertices: Int)
     {
-        let r = sqrt(Double(4) * Double(avgDegree) / Double(numberOfVertices))
+        let r = sqrt(Float(4) * Float(avgDegree) / Float(numberOfVertices))
         super.init(r: r, numberOfVertices: numberOfVertices)
         createVertices()
         createEdges()
@@ -24,15 +24,15 @@ public class Sphere: RGG
     {
         for i in 0...(nVertices-1)
         {
-            var len:Double
-            var x:Double
-            var y:Double
-            var z:Double
+            var len:Float
+            var x:Float
+            var y:Float
+            var z:Float
             repeat
             {
-                x = Double.random(-1, max: 1)
-                y = Double.random(-1, max: 1)
-                z = Double.random(-1, max: 1)
+                x = Float.random(-1, max: 1)
+                y = Float.random(-1, max: 1)
+                z = Float.random(-1, max: 1)
                 len = sqrt(square(x) + square(y) + square(z))
             }while(len > 1)
             x /= len; y /= len; z /= len

@@ -8,13 +8,13 @@
 
 import Foundation
 public class Vertex {
-    public let x:Double, y:Double, z:Double
+    public let x:Float, y:Float, z:Float
     public let id:Int
     public var color:Int = 0
     public var adjArray = [Int]()
     public var degree = 0
     
-    init(id:Int, x:Double, y:Double, z:Double = 0)
+    init(id:Int, x:Float, y:Float, z:Float = 0)
     {
         self.id = id
         self.x = x

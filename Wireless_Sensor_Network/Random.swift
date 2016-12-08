@@ -16,12 +16,12 @@ public extension Double {
         }
     }
     /**
-     Create a random number Double
+     Create a random number Float
      
-     - parameter min: Double
-     - parameter max: Double
+     - parameter min: Float
+     - parameter max: Float
      
-     - returns: Double
+     - returns: Float
      */
     public static func random(min: Double, max: Double) -> Double {
         return Double.random * (max - min) + min

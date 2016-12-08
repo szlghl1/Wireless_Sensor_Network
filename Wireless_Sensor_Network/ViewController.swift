@@ -38,7 +38,7 @@ class ViewController: UIViewController {
             let sphere = SCNSphere(radius: 0.05)
             sphere.firstMaterial?.diffuse.contents = getColor(v.color)
             let sphereNode = SCNNode(geometry: sphere)
-            sphereNode.position = SCNVector3Make(Float(v.x), Float(v.y), Float(v.z))
+            sphereNode.position = SCNVector3Make(v.x, v.y, v.z)
             sceneInstance.rootNode.addChildNode(sphereNode)
             for i in v.adjArray
             {
