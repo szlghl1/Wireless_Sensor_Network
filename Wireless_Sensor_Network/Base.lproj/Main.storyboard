@@ -1,42 +1,300 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Vkl-He-Oca">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Graph-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wireless_Sensor_Network" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RGGViewController" customModule="Wireless_Sensor_Network" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Xf-11-Sbi"/>
                         <viewControllerLayoutGuide type="bottom" id="mWx-p4-xfa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVU-DD-4DN">
-                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QSp-Wm-tkN" userLabel="Stack Edges">
+                                <rect key="frame" x="30" y="115" width="312" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highlight Max/Min Degree Vertex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIC-K7-Uye">
+                                        <rect key="frame" x="0.0" y="0.0" width="253" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lut-8T-Tkt">
+                                        <rect key="frame" x="263" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="highlightSwitchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="VbB-5h-j70"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQc-t0-SlG">
+                                <rect key="frame" x="0.0" y="156" width="600" height="395"/>
                             </sceneKitView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOi-vF-Pnx" userLabel="Stack Highlight">
+                                <rect key="frame" x="30" y="74" width="312" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Edges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6J-v7-1Nr">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMT-37-8Bb">
+                                        <rect key="frame" x="263" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="edgeSwitchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="wtq-yl-XUH"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="dg9-HS-x7L"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="aVU-DD-4DN" secondAttribute="trailing" constant="20" id="4Lk-sH-YhO"/>
-                            <constraint firstItem="aVU-DD-4DN" firstAttribute="top" secondItem="0Xf-11-Sbi" secondAttribute="bottom" constant="200" id="4pc-Ql-S0b"/>
-                            <constraint firstItem="aVU-DD-4DN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="6Qv-r5-ncW"/>
-                            <constraint firstItem="mWx-p4-xfa" firstAttribute="top" secondItem="aVU-DD-4DN" secondAttribute="bottom" constant="220" id="Tel-Wk-0Ef"/>
+                            <constraint firstItem="QSp-Wm-tkN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="7NZ-O2-MOb"/>
+                            <constraint firstItem="QSp-Wm-tkN" firstAttribute="top" secondItem="LOi-vF-Pnx" secondAttribute="bottom" constant="10" id="9ZI-xb-3yE"/>
+                            <constraint firstItem="LOi-vF-Pnx" firstAttribute="top" secondItem="0Xf-11-Sbi" secondAttribute="bottom" constant="10" id="F9u-vA-DCe"/>
+                            <constraint firstItem="OQc-t0-SlG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FOR-71-fGD"/>
+                            <constraint firstItem="LOi-vF-Pnx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="hyH-L5-rFG"/>
+                            <constraint firstItem="QSp-Wm-tkN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="mZd-Ka-334"/>
+                            <constraint firstItem="OQc-t0-SlG" firstAttribute="top" secondItem="QSp-Wm-tkN" secondAttribute="bottom" constant="10" id="pjc-Dn-qHy"/>
+                            <constraint firstItem="mWx-p4-xfa" firstAttribute="top" secondItem="OQc-t0-SlG" secondAttribute="bottom" id="tjl-5R-9Uo"/>
+                            <constraint firstAttribute="trailing" secondItem="OQc-t0-SlG" secondAttribute="trailing" id="ue3-FB-u62"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Graph" id="3dl-yT-Urb"/>
                     <connections>
-                        <outlet property="sceneView" destination="aVU-DD-4DN" id="nsV-vd-dwv"/>
+                        <outlet property="highlightSwitch" destination="Lut-8T-Tkt" id="OpH-wx-DIV"/>
+                        <outlet property="sceneView" destination="OQc-t0-SlG" id="rfE-bW-ovU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162.66666666666666" y="240.92666666666668"/>
+            <point key="canvasLocation" x="1684" y="-35"/>
+        </scene>
+        <!--Type in your parameters for RGG-->
+        <scene sceneID="EZJ-Pf-2SU">
+            <objects>
+                <viewController id="sE7-OS-MCN" customClass="CreateGraphViewController" customModule="Wireless_Sensor_Network" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pOD-fe-YrS"/>
+                        <viewControllerLayoutGuide type="bottom" id="rSI-l6-LXf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RDW-OB-3F1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Y0l-IR-Jya">
+                                <rect key="frame" x="30" y="150" width="540" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shape:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQK-2I-Q02">
+                                        <rect key="frame" x="0.0" y="0.0" width="540" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8kb-5Q-Cvz">
+                                        <rect key="frame" x="0.0" y="41" width="540" height="29"/>
+                                        <segments>
+                                            <segment title="Disk"/>
+                                            <segment title="Square"/>
+                                            <segment title="Sphere"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Num. of Vertices" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4Y-qB-yrj">
+                                        <rect key="frame" x="0.0" y="89" width="540" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="la8-Lf-gAz">
+                                        <rect key="frame" x="0.0" y="130" width="540" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Degree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzL-n8-jfD">
+                                        <rect key="frame" x="0.0" y="179" width="540" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AIr-mz-ucv">
+                                        <rect key="frame" x="0.0" y="220" width="540" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0M-hG-s8K">
+                                        <rect key="frame" x="0.0" y="270" width="540" height="30"/>
+                                        <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <segue destination="yqD-TJ-qFF" kind="show" id="822-fW-fgm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="Mwt-MF-ZJg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y0l-IR-Jya" secondAttribute="trailing" constant="10" id="IdF-Js-LeG"/>
+                            <constraint firstItem="rSI-l6-LXf" firstAttribute="top" secondItem="Y0l-IR-Jya" secondAttribute="bottom" priority="999" constant="10" id="LdQ-Jd-4ts"/>
+                            <constraint firstItem="Y0l-IR-Jya" firstAttribute="top" secondItem="pOD-fe-YrS" secondAttribute="bottom" priority="999" constant="10" id="UC4-XM-YGx"/>
+                            <constraint firstItem="Y0l-IR-Jya" firstAttribute="centerY" secondItem="RDW-OB-3F1" secondAttribute="centerY" id="aod-ju-iev"/>
+                            <constraint firstItem="Y0l-IR-Jya" firstAttribute="leading" secondItem="RDW-OB-3F1" secondAttribute="leadingMargin" constant="10" id="zbf-aE-Fdb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Type in your parameters for RGG" id="sSo-Iy-Nnu"/>
+                    <connections>
+                        <outlet property="avgDegreeText" destination="AIr-mz-ucv" id="2Yi-aE-TE1"/>
+                        <outlet property="nVerText" destination="la8-Lf-gAz" id="xsn-vA-om6"/>
+                        <outlet property="shapeSegCtrl" destination="8kb-5Q-Cvz" id="ae3-Vu-klf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XLi-IG-f53" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="688"/>
+        </scene>
+        <!--Backbone-->
+        <scene sceneID="FHX-qD-F3Y">
+            <objects>
+                <viewController id="4IL-7s-Who" userLabel="Backbone" customClass="BackboneViewController" customModule="Wireless_Sensor_Network" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hND-AJ-OEQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="uT3-wq-HXB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AA4-K7-Zcb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kjm-wr-n7b">
+                                <rect key="frame" x="240" y="74" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5h-Uk-pSD">
+                                <rect key="frame" x="0.0" y="112" width="600" height="439"/>
+                            </sceneKitView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kjm-wr-n7b" firstAttribute="top" secondItem="hND-AJ-OEQ" secondAttribute="bottom" constant="10" id="2C6-8U-KQG"/>
+                            <constraint firstItem="o5h-Uk-pSD" firstAttribute="top" secondItem="kjm-wr-n7b" secondAttribute="bottom" constant="10" id="RU2-hq-PlM"/>
+                            <constraint firstItem="kjm-wr-n7b" firstAttribute="centerX" secondItem="AA4-K7-Zcb" secondAttribute="centerX" id="RkF-n4-JBM"/>
+                            <constraint firstItem="uT3-wq-HXB" firstAttribute="top" secondItem="o5h-Uk-pSD" secondAttribute="bottom" id="V5S-Pi-QZJ"/>
+                            <constraint firstAttribute="trailing" secondItem="o5h-Uk-pSD" secondAttribute="trailing" id="bxW-uZ-Tet"/>
+                            <constraint firstItem="o5h-Uk-pSD" firstAttribute="leading" secondItem="AA4-K7-Zcb" secondAttribute="leading" id="t7C-bj-pX6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Backbone" id="rWN-Ej-xSt" userLabel="Backbone"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTR-Ul-MPf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684" y="688"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="rWg-gV-xox">
+            <objects>
+                <tabBarController id="yqD-TJ-qFF" customClass="TabBarViewController" customModule="Wireless_Sensor_Network" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="l6I-78-103">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Ji8-3s-MTz"/>
+                        <segue destination="4IL-7s-Who" kind="relationship" relationship="viewControllers" id="VF6-Zb-6gw"/>
+                        <segue destination="GfC-zF-33q" kind="relationship" relationship="viewControllers" id="rZG-XW-VP0"/>
+                        <segue destination="uXG-B6-RQD" kind="relationship" relationship="viewControllers" id="99Z-jK-pnv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BdQ-pp-awX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="1426"/>
+        </scene>
+        <!--Charts-->
+        <scene sceneID="m46-EW-D2s">
+            <objects>
+                <viewController id="GfC-zF-33q" customClass="ChartsViewController" customModule="Wireless_Sensor_Network" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4FL-Xy-wxr"/>
+                        <viewControllerLayoutGuide type="bottom" id="0WO-HV-cJK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="imX-XS-EJ1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Charts" id="gj0-Ls-iky"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FJQ-aX-L4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684" y="1426"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="Ud5-OL-2A9">
+            <objects>
+                <viewController id="uXG-B6-RQD" customClass="GraphInfoViewController" customModule="Wireless_Sensor_Network" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k5t-rG-srq"/>
+                        <viewControllerLayoutGuide type="bottom" id="N61-lF-tdp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2pR-oR-AbC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label for output info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzi-37-fC3">
+                                <rect key="frame" x="10" y="74" width="580" height="477"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kzi-37-fC3" secondAttribute="trailing" constant="10" id="Bqi-eX-qrF"/>
+                            <constraint firstItem="N61-lF-tdp" firstAttribute="top" secondItem="kzi-37-fC3" secondAttribute="bottom" id="EOr-ID-66v"/>
+                            <constraint firstItem="kzi-37-fC3" firstAttribute="leading" secondItem="2pR-oR-AbC" secondAttribute="leading" constant="10" id="Ydj-zg-eVK"/>
+                            <constraint firstItem="kzi-37-fC3" firstAttribute="top" secondItem="k5t-rG-srq" secondAttribute="bottom" constant="10" id="wsM-Ay-vDA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Info" id="Xjd-NL-J0y"/>
+                    <connections>
+                        <outlet property="infoLabel" destination="kzi-37-fC3" id="bwE-iG-vsD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yMQ-on-1ci" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684" y="2206"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MRf-iy-4iQ">
+            <objects>
+                <navigationController id="Vkl-He-Oca" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uUM-aj-jo0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sE7-OS-MCN" kind="relationship" relationship="rootViewController" id="P8E-RF-gZW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJp-Fp-O2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="688"/>
         </scene>
     </scenes>
 </document>

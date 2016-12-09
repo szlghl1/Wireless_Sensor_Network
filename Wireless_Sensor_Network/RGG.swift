@@ -38,6 +38,53 @@ public class RGG {
         }
         return maxColor + 1
     }()
+    lazy var minDegree:Int = {
+        var res = 0
+        if self.vertices.count != 0
+        {
+            res = self.vertices[0].degree
+            for v in self.vertices
+            {
+                res = (res < v.degree) ? res : v.degree
+            }
+        }
+        return res
+    }()
+    //vertex with min degree
+    lazy var minVertex:Vertex = {
+        var res = Vertex(id: -1, x: -1, y: -1)
+        for v in self.vertices
+        {
+            if v.degree == self.minDegree
+            {
+                res = v
+            }
+        }
+        return res
+    }()
+    lazy var maxDegree:Int = {
+        var res = 0
+        if self.vertices.count != 0
+        {
+            res = self.vertices[0].degree
+            for v in self.vertices
+            {
+                res = (res > v.degree) ? res : v.degree
+            }
+        }
+        return res
+    }()
+    lazy var maxVertex:Vertex = {
+        var res = Vertex(id: -1, x: -1, y: -1)
+        for v in self.vertices
+        {
+            if v.degree == self.maxDegree
+            {
+                res = v
+            }
+        }
+        return res
+    }()
     
     init(r:Float, numberOfVertices:Int)
     {

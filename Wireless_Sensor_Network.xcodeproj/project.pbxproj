@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		456025EE1DF7F7AF00E86E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */; };
-		456025F01DF7F7AF00E86E1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456025EF1DF7F7AF00E86E1D /* ViewController.swift */; };
+		456025F01DF7F7AF00E86E1D /* RGGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */; };
 		456025F31DF7F7AF00E86E1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456025F11DF7F7AF00E86E1D /* Main.storyboard */; };
 		456025F51DF7F7AF00E86E1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456025F41DF7F7AF00E86E1D /* Assets.xcassets */; };
 		456025F81DF7F7AF00E86E1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456025F61DF7F7AF00E86E1D /* LaunchScreen.storyboard */; };
@@ -20,6 +20,12 @@
 		456026171DF80F4E00E86E1D /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026161DF80F4E00E86E1D /* Square.swift */; };
 		456026191DF8107200E86E1D /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026181DF8107200E86E1D /* Sphere.swift */; };
 		4560261B1DF81F1400E86E1D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560261A1DF81F1400E86E1D /* Stack.swift */; };
+		45C8F1B81DFA87CD001C3685 /* BackboneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1B71DFA87CD001C3685 /* BackboneViewController.swift */; };
+		45C8F1BA1DFA88A8001C3685 /* GraphInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1B91DFA88A8001C3685 /* GraphInfoViewController.swift */; };
+		45C8F1BC1DFA88BD001C3685 /* CreateGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1BB1DFA88BD001C3685 /* CreateGraphViewController.swift */; };
+		45C8F1BE1DFA88FC001C3685 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1BD1DFA88FC001C3685 /* ChartsViewController.swift */; };
+		45C8F1C01DFA8A2F001C3685 /* GraphShapeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1BF1DFA8A2F001C3685 /* GraphShapeEnum.swift */; };
+		45C8F1C61DFA9E50001C3685 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1C51DFA9E50001C3685 /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +41,7 @@
 /* Begin PBXFileReference section */
 		456025EA1DF7F7AF00E86E1D /* Wireless_Sensor_Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wireless_Sensor_Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		456025EF1DF7F7AF00E86E1D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGGViewController.swift; sourceTree = "<group>"; };
 		456025F21DF7F7AF00E86E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		456025F41DF7F7AF00E86E1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		456025F71DF7F7AF00E86E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +56,12 @@
 		456026161DF80F4E00E86E1D /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		456026181DF8107200E86E1D /* Sphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
 		4560261A1DF81F1400E86E1D /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		45C8F1B71DFA87CD001C3685 /* BackboneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackboneViewController.swift; sourceTree = "<group>"; };
+		45C8F1B91DFA88A8001C3685 /* GraphInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphInfoViewController.swift; sourceTree = "<group>"; };
+		45C8F1BB1DFA88BD001C3685 /* CreateGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGraphViewController.swift; sourceTree = "<group>"; };
+		45C8F1BD1DFA88FC001C3685 /* ChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		45C8F1BF1DFA8A2F001C3685 /* GraphShapeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphShapeEnum.swift; sourceTree = "<group>"; };
+		45C8F1C51DFA9E50001C3685 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = ../TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +103,9 @@
 		456025EC1DF7F7AF00E86E1D /* Wireless_Sensor_Network */ = {
 			isa = PBXGroup;
 			children = (
+				45C8F1B21DFA86C5001C3685 /* ViewController */,
 				4560260D1DF7F7E600E86E1D /* GraphModel */,
 				456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */,
-				456025EF1DF7F7AF00E86E1D /* ViewController.swift */,
 				456025F11DF7F7AF00E86E1D /* Main.storyboard */,
 				456025F41DF7F7AF00E86E1D /* Assets.xcassets */,
 				456025F61DF7F7AF00E86E1D /* LaunchScreen.storyboard */,
@@ -123,6 +135,20 @@
 				4560261A1DF81F1400E86E1D /* Stack.swift */,
 			);
 			name = GraphModel;
+			sourceTree = "<group>";
+		};
+		45C8F1B21DFA86C5001C3685 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				45C8F1C51DFA9E50001C3685 /* TabBarViewController.swift */,
+				45C8F1B71DFA87CD001C3685 /* BackboneViewController.swift */,
+				45C8F1B91DFA88A8001C3685 /* GraphInfoViewController.swift */,
+				45C8F1BB1DFA88BD001C3685 /* CreateGraphViewController.swift */,
+				456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */,
+				45C8F1BD1DFA88FC001C3685 /* ChartsViewController.swift */,
+				45C8F1BF1DFA8A2F001C3685 /* GraphShapeEnum.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,7 +197,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "凌何";
+				ORGANIZATIONNAME = LingHe;
 				TargetAttributes = {
 					456025E91DF7F7AF00E86E1D = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -228,14 +254,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45C8F1BE1DFA88FC001C3685 /* ChartsViewController.swift in Sources */,
 				456026121DF7F7F900E86E1D /* RGG.swift in Sources */,
 				4560261B1DF81F1400E86E1D /* Stack.swift in Sources */,
 				456026111DF7F7F900E86E1D /* Disk.swift in Sources */,
 				456026151DF8000400E86E1D /* Random.swift in Sources */,
 				456026171DF80F4E00E86E1D /* Square.swift in Sources */,
-				456025F01DF7F7AF00E86E1D /* ViewController.swift in Sources */,
+				45C8F1BA1DFA88A8001C3685 /* GraphInfoViewController.swift in Sources */,
+				456025F01DF7F7AF00E86E1D /* RGGViewController.swift in Sources */,
+				45C8F1BC1DFA88BD001C3685 /* CreateGraphViewController.swift in Sources */,
+				45C8F1C01DFA8A2F001C3685 /* GraphShapeEnum.swift in Sources */,
 				456026131DF7F7F900E86E1D /* Vertex.swift in Sources */,
+				45C8F1B81DFA87CD001C3685 /* BackboneViewController.swift in Sources */,
 				456026191DF8107200E86E1D /* Sphere.swift in Sources */,
+				45C8F1C61DFA9E50001C3685 /* TabBarViewController.swift in Sources */,
 				456025EE1DF7F7AF00E86E1D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,7 +401,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "heling.Wireless-Sensor-Network";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -381,7 +413,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "heling.Wireless-Sensor-Network";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
