@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		455C09B41DFB8E6900790F50 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C09B31DFB8E6900790F50 /* Graph.swift */; };
-		455C09B61DFB9FEC00790F50 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C09B51DFB9FEC00790F50 /* RandomColor.swift */; };
+		455C09B61DFB9FEC00790F50 /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C09B51DFB9FEC00790F50 /* Draw.swift */; };
 		456025EE1DF7F7AF00E86E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */; };
 		456025F01DF7F7AF00E86E1D /* RGGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */; };
 		456025F31DF7F7AF00E86E1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456025F11DF7F7AF00E86E1D /* Main.storyboard */; };
@@ -22,6 +22,8 @@
 		456026171DF80F4E00E86E1D /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026161DF80F4E00E86E1D /* Square.swift */; };
 		456026191DF8107200E86E1D /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026181DF8107200E86E1D /* Sphere.swift */; };
 		4560261B1DF81F1400E86E1D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560261A1DF81F1400E86E1D /* Stack.swift */; };
+		45C3217F1DFC028D004AA363 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C3217A1DFC0286004AA363 /* Charts.framework */; };
+		45C321801DFC028D004AA363 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45C3217A1DFC0286004AA363 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		45C8F1B81DFA87CD001C3685 /* BackboneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1B71DFA87CD001C3685 /* BackboneViewController.swift */; };
 		45C8F1BA1DFA88A8001C3685 /* GraphInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1B91DFA88A8001C3685 /* GraphInfoViewController.swift */; };
 		45C8F1BC1DFA88BD001C3685 /* CreateGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1BB1DFA88BD001C3685 /* CreateGraphViewController.swift */; };
@@ -38,11 +40,53 @@
 			remoteGlobalIDString = 456025E91DF7F7AF00E86E1D;
 			remoteInfo = Wireless_Sensor_Network;
 		};
+		45C321791DFC0286004AA363 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45C321731DFC0285004AA363 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		45C3217B1DFC0286004AA363 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45C321731DFC0285004AA363 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06B120D51D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
+		45C3217D1DFC0286004AA363 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45C321731DFC0285004AA363 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		45C321811DFC028D004AA363 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45C321731DFC0285004AA363 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4504488D1DFBC03A00609765 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				45C321801DFC028D004AA363 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		455C09B31DFB8E6900790F50 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
-		455C09B51DFB9FEC00790F50 /* RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
+		455C09B51DFB9FEC00790F50 /* Draw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
 		456025EA1DF7F7AF00E86E1D /* Wireless_Sensor_Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wireless_Sensor_Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGGViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +104,7 @@
 		456026161DF80F4E00E86E1D /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
 		456026181DF8107200E86E1D /* Sphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
 		4560261A1DF81F1400E86E1D /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		45C321731DFC0285004AA363 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
 		45C8F1B71DFA87CD001C3685 /* BackboneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackboneViewController.swift; sourceTree = "<group>"; };
 		45C8F1B91DFA88A8001C3685 /* GraphInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphInfoViewController.swift; sourceTree = "<group>"; };
 		45C8F1BB1DFA88BD001C3685 /* CreateGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGraphViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45C3217F1DFC028D004AA363 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +135,7 @@
 		456025E11DF7F7AF00E86E1D = {
 			isa = PBXGroup;
 			children = (
+				45C321731DFC0285004AA363 /* Charts.xcodeproj */,
 				456025EC1DF7F7AF00E86E1D /* Wireless_Sensor_Network */,
 				456026011DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests */,
 				456025EB1DF7F7AF00E86E1D /* Products */,
@@ -142,6 +189,16 @@
 			name = GraphModel;
 			sourceTree = "<group>";
 		};
+		45C321741DFC0285004AA363 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45C3217A1DFC0286004AA363 /* Charts.framework */,
+				45C3217C1DFC0286004AA363 /* ChartsRealm.framework */,
+				45C3217E1DFC0286004AA363 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		45C8F1B21DFA86C5001C3685 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +209,7 @@
 				456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */,
 				45C8F1BD1DFA88FC001C3685 /* ChartsViewController.swift */,
 				45C8F1BF1DFA8A2F001C3685 /* GraphShapeEnum.swift */,
-				455C09B51DFB9FEC00790F50 /* RandomColor.swift */,
+				455C09B51DFB9FEC00790F50 /* Draw.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -167,10 +224,12 @@
 				456025E61DF7F7AF00E86E1D /* Sources */,
 				456025E71DF7F7AF00E86E1D /* Frameworks */,
 				456025E81DF7F7AF00E86E1D /* Resources */,
+				4504488D1DFBC03A00609765 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				45C321821DFC028D004AA363 /* PBXTargetDependency */,
 			);
 			name = Wireless_Sensor_Network;
 			productName = Wireless_Sensor_Network;
@@ -227,6 +286,12 @@
 			mainGroup = 456025E11DF7F7AF00E86E1D;
 			productRefGroup = 456025EB1DF7F7AF00E86E1D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 45C321741DFC0285004AA363 /* Products */;
+					ProjectRef = 45C321731DFC0285004AA363 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				456025E91DF7F7AF00E86E1D /* Wireless_Sensor_Network */,
@@ -234,6 +299,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		45C3217A1DFC0286004AA363 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 45C321791DFC0286004AA363 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		45C3217C1DFC0286004AA363 /* ChartsRealm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsRealm.framework;
+			remoteRef = 45C3217B1DFC0286004AA363 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		45C3217E1DFC0286004AA363 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 45C3217D1DFC0286004AA363 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		456025E81DF7F7AF00E86E1D /* Resources */ = {
@@ -264,7 +353,7 @@
 				456026121DF7F7F900E86E1D /* RGG.swift in Sources */,
 				4560261B1DF81F1400E86E1D /* Stack.swift in Sources */,
 				456026111DF7F7F900E86E1D /* Disk.swift in Sources */,
-				455C09B61DFB9FEC00790F50 /* RandomColor.swift in Sources */,
+				455C09B61DFB9FEC00790F50 /* Draw.swift in Sources */,
 				456026151DF8000400E86E1D /* Random.swift in Sources */,
 				456026171DF80F4E00E86E1D /* Square.swift in Sources */,
 				45C8F1BA1DFA88A8001C3685 /* GraphInfoViewController.swift in Sources */,
@@ -295,6 +384,11 @@
 			isa = PBXTargetDependency;
 			target = 456025E91DF7F7AF00E86E1D /* Wireless_Sensor_Network */;
 			targetProxy = 456025FF1DF7F7AF00E86E1D /* PBXContainerItemProxy */;
+		};
+		45C321821DFC028D004AA363 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 45C321811DFC028D004AA363 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -404,7 +498,9 @@
 		456026081DF7F7AF00E86E1D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Wireless_Sensor_Network/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "heling.Wireless-Sensor-Network";
@@ -416,7 +512,9 @@
 		456026091DF7F7AF00E86E1D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Wireless_Sensor_Network/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "heling.Wireless-Sensor-Network";

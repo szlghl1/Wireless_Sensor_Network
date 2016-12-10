@@ -32,14 +32,18 @@ class CreateGraphViewController: UIViewController {
             var g:RGG?
             let avgD = Int(avgDegreeText.text!)!
             let nV = Int(nVerText.text!)!
+            var shape: GraphShapeEnum?
             switch shapeSegCtrl.selectedSegmentIndex
             {
             case 0:
                 g = Disk(avgDegree: avgD, numberOfVertices: nV)
+                shape = .Disk
             case 1:
                 g = Square(avgDegree: avgD, numberOfVertices: nV)
+                shape = .Square
             case 2:
                 g = Sphere(avgDegree: avgD, numberOfVertices: nV)
+                shape = .Sphere
             default:
                 break
             }
@@ -50,21 +54,12 @@ class CreateGraphViewController: UIViewController {
             
             if let dest = (tab.viewControllers?[1] as? BackboneViewController)
             {
-                var b1 = [Vertex]()
-                var b2 = [Vertex]()
                 if let twoBs = g?.twoBackbones
                 {
-                    for id in twoBs.b1IdArray
-                    {
-                        b1.append(g!.vertices[id])
-                    }
-                    for id in twoBs.b2IdArray
-                    {
-                        b2.append(g!.vertices[id])
-                    }
+                    dest.backbone0 = twoBs.b0VertexArray
+                    dest.backbone1 = twoBs.b1VertexArray
+                    dest.shape = shape
                 }
-                dest.backbone0 = b1
-                dest.backbone1 = b2
             }
             
             if let dest = (tab.viewControllers?[2] as? ChartsViewController)

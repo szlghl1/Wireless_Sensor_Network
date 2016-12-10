@@ -82,4 +82,18 @@ public class Graph {
         }
         return res
     }()
+    lazy var colorDistribution:[Int] = {
+        var res = [Int](count: self.numColor, repeatedValue: 0)
+        for v in self.vertices{
+            res[v.color]++
+        }
+        return res
+    }()
+    lazy var degreeDistribution:[Int] = {
+        var res = [Int](count: self.maxDegree + 1, repeatedValue: 0)
+        for v in self.vertices{
+            res[v.degree]++
+        }
+        return res
+    }()
 }

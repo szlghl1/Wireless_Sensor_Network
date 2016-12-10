@@ -14,11 +14,12 @@ public class RGG: Graph {
     //distance therehold for edge gernerating
     let radius:Float
     
-    lazy var twoBackbones: (b1IdArray: [Int], b2IdArray: [Int]) =
+    lazy var twoBackbones: (b0VertexArray: [Vertex], b1VertexArray: [Vertex]) =
     {
         if(self.numColor < 4)
         {
-            return ([Int](),[Int]())
+            //the definition of "the first two backbones is to pick the largest two from possible combination of 4 color set
+            return ([Vertex](),[Vertex]())
         }
         var colorArray = [(color:Int, idArray: [Int])]()
         for i in 0...self.numColor-1
@@ -30,9 +31,21 @@ public class RGG: Graph {
             colorArray[v.color].idArray.append(v.id)
         }
         colorArray.sortInPlace({$0.idArray.count > $1.idArray.count})
-        let b1 = colorArray[0].idArray + colorArray[1].idArray
-        let b2 = colorArray[0].idArray + colorArray[2].idArray
-        return (b1, b2)
+        let b0IDs = colorArray[0].idArray + colorArray[1].idArray
+        let b1IDs = colorArray[0].idArray + colorArray[2].idArray
+        var b0 = [Vertex]()
+        var b1 = [Vertex]()
+        for i in b0IDs{
+            let v = self.vertices[i].copy()
+            v.adjArray = v.adjArray.filter({b0IDs.contains($0)})
+            b0.append(v)
+        }
+        for i in b1IDs{
+            let v = self.vertices[i].copy()
+            v.adjArray = v.adjArray.filter({b1IDs.contains($0)})
+            b1.append(v)
+        }
+        return (b0, b1)
     }()
     public init(avgDegree: Int, numberOfVertices: Int)
     {
