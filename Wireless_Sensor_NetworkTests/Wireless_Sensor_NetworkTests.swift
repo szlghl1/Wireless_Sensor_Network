@@ -22,8 +22,8 @@ class Wireless_Sensor_NetworkTests: XCTestCase {
     
     func testExample() {
         let d = 10; let nV:Int = 4000
-        let upperD = Double(d) * 1.1
-        let lowerD = Double(d) * 0.9
+        let upperD = Float(d) * 1.1
+        let lowerD = Float(d) * 0.9
         let testDisk = Disk(avgDegree: d, numberOfVertices: nV)
         XCTAssert(testDisk.avgDegree > lowerD && testDisk.avgDegree < upperD)
         print("avgDegree = ", testDisk.avgDegree)
