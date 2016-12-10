@@ -10,19 +10,10 @@ import Foundation
 
 public class Sphere: RGG
 {
-    public init(avgDegree: Int, numberOfVertices: Int)
-    {
-        let r = sqrt(Float(4) * Float(avgDegree) / Float(numberOfVertices))
-        super.init(r: r, numberOfVertices: numberOfVertices)
-        createVertices()
-        createEdges()
-        color()
-    }
-    
     //create vertices in unit sphere (x, y, z in [-1,1])
-    override func createVertices()
+    override func createVertices(nV:Int)
     {
-        for i in 0...(nVertices-1)
+        for i in 0...(nV-1)
         {
             var len:Float
             var x:Float

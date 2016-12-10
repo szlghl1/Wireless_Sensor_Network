@@ -95,7 +95,7 @@ class RGGViewController: UIViewController {
         
         for v in graphToDraw!.vertices
         {
-            let sphere = SCNSphere(radius: 0.01)
+            let sphere = SCNSphere(radius: 0.03)
             sphere.firstMaterial?.diffuse.contents = getColor(v.color)
             let sphereNode = SCNNode(geometry: sphere)
             sphereNode.position = SCNVector3Make(v.x, v.y, v.z)

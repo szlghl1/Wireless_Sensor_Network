@@ -10,93 +10,22 @@ import Foundation
 
 func square(a:Float) -> Float {return a * a}
 
-public class RGG {
-    public var vertices = [Vertex]()
+public class RGG: Graph {
     let radius:Float
-    let nVertices:Int//number of vertices
-    lazy var nEdges:Int =
+    public init(avgDegree: Int, numberOfVertices: Int)
     {
-        var n:Int = 0
-        for v in self.vertices
-        {
-            n += v.adjArray.count
-        }
-        n /= 2
-        return n
-    }()
-    lazy var avgDegree:Float = {
-        return Float(self.nEdges*2) / Float(self.nVertices)
-    }()
-    lazy var numColor:Int = {
-        var maxColor = 0
-        for v in self.vertices
-        {
-            if v.color > maxColor
-            {
-                maxColor = v.color
-            }
-        }
-        return maxColor + 1
-    }()
-    lazy var minDegree:Int = {
-        var res = 0
-        if self.vertices.count != 0
-        {
-            res = self.vertices[0].degree
-            for v in self.vertices
-            {
-                res = (res < v.degree) ? res : v.degree
-            }
-        }
-        return res
-    }()
-    //vertex with min degree
-    lazy var minVertex:Vertex = {
-        var res = Vertex(id: -1, x: -1, y: -1)
-        for v in self.vertices
-        {
-            if v.degree == self.minDegree
-            {
-                res = v
-            }
-        }
-        return res
-    }()
-    lazy var maxDegree:Int = {
-        var res = 0
-        if self.vertices.count != 0
-        {
-            res = self.vertices[0].degree
-            for v in self.vertices
-            {
-                res = (res > v.degree) ? res : v.degree
-            }
-        }
-        return res
-    }()
-    lazy var maxVertex:Vertex = {
-        var res = Vertex(id: -1, x: -1, y: -1)
-        for v in self.vertices
-        {
-            if v.degree == self.maxDegree
-            {
-                res = v
-            }
-        }
-        return res
-    }()
-    
-    init(r:Float, numberOfVertices:Int)
-    {
+        let r = sqrt(Float(avgDegree) / Float(numberOfVertices))
         if(r < 0 || numberOfVertices < 1)
         {
             preconditionFailure("incorrect parameters")
         }
         radius = r
-        nVertices = numberOfVertices
+        super.init()
+        createVertices(numberOfVertices)
+        createEdges()
+        color()
     }
-    
-    func createVertices() throws
+    func createVertices(nV: Int)
     {
         preconditionFailure("createVertices should be implemented in subclass of RGG")
     }

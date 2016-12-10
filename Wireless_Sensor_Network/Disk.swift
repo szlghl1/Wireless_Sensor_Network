@@ -10,19 +10,10 @@ import Foundation
 
 public class Disk: RGG
 {
-    public init(avgDegree: Int, numberOfVertices: Int)
-    {
-        let r = sqrt(Float(avgDegree) / Float(numberOfVertices))
-        super.init(r: r, numberOfVertices: numberOfVertices)        
-        createVertices()
-        createEdges()
-        color()
-    }
-    
     //create vertices in unit disk(r = 1)
-    override func createVertices()
+    override func createVertices(nV: Int)
     {
-        for i in 0...(nVertices-1)
+        for i in 0...(nV-1)
         {
             var x:Float
             var y:Float

@@ -9,20 +9,11 @@
 import Foundation
 
 public class Square: RGG
-{
-    public init(avgDegree: Int, numberOfVertices: Int)
-    {
-        let r = sqrt(Float(avgDegree) / (Float(M_PI) * Float(numberOfVertices)))
-        super.init(r: r, numberOfVertices: numberOfVertices)
-        createVertices()
-        createEdges()
-        color()
-    }
-    
+{    
     //create vertices in unit square (x in [0,1], y in [0,1])
-    override func createVertices()
+    override func createVertices(nV: Int)
     {
-        for i in 0...(nVertices-1)
+        for i in 0...(nV-1)
         {
             let x = Float.random(0, max: 1)
             let y = Float.random(0, max: 1)
