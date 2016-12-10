@@ -248,9 +248,49 @@
                     <view key="view" contentMode="scaleToFill" id="imX-XS-EJ1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="30X-TE-g8C">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Gx-ni-AIs" userLabel="DegreeDistriView" customClass="BarChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g28-jm-E1c" userLabel="ColorDistriView" customClass="BarChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="184.5" width="375" height="185"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKt-hv-wYt" userLabel="CompareDegreeView" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="369.5" width="375" height="184.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="FKt-hv-wYt" secondAttribute="trailing" id="2eU-ew-b26"/>
+                                    <constraint firstItem="g28-jm-E1c" firstAttribute="leading" secondItem="30X-TE-g8C" secondAttribute="leading" id="AIq-rU-HJC"/>
+                                    <constraint firstAttribute="bottom" secondItem="FKt-hv-wYt" secondAttribute="bottom" id="Tbr-4s-fau"/>
+                                    <constraint firstItem="4Gx-ni-AIs" firstAttribute="top" secondItem="30X-TE-g8C" secondAttribute="top" id="Uvm-Ow-pRg"/>
+                                    <constraint firstItem="FKt-hv-wYt" firstAttribute="leading" secondItem="30X-TE-g8C" secondAttribute="leading" id="V8E-iY-X30"/>
+                                    <constraint firstItem="4Gx-ni-AIs" firstAttribute="leading" secondItem="30X-TE-g8C" secondAttribute="leading" id="dcS-9O-l1j"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Gx-ni-AIs" secondAttribute="trailing" id="gn1-ZL-DCa"/>
+                                    <constraint firstAttribute="trailing" secondItem="g28-jm-E1c" secondAttribute="trailing" id="rfS-0k-Pgi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="30X-TE-g8C" secondAttribute="trailing" id="AhU-m7-Hfn"/>
+                            <constraint firstItem="0WO-HV-cJK" firstAttribute="top" secondItem="30X-TE-g8C" secondAttribute="bottom" id="N9Z-bb-og0"/>
+                            <constraint firstItem="30X-TE-g8C" firstAttribute="top" secondItem="4FL-Xy-wxr" secondAttribute="bottom" id="hpA-2X-vIc"/>
+                            <constraint firstItem="30X-TE-g8C" firstAttribute="leading" secondItem="imX-XS-EJ1" secondAttribute="leading" id="jfU-BE-4vm"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Charts" id="gj0-Ls-iky"/>
+                    <connections>
+                        <outlet property="colorDistriView" destination="g28-jm-E1c" id="SQ9-mQ-uCa"/>
+                        <outlet property="compareDegreeView" destination="FKt-hv-wYt" id="JnC-57-zpc"/>
+                        <outlet property="degreeDistriView" destination="4Gx-ni-AIs" id="miJ-U6-g2e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJQ-aX-L4G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

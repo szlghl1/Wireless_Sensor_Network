@@ -64,7 +64,10 @@ class CreateGraphViewController: UIViewController {
             
             if let dest = (tab.viewControllers?[2] as? ChartsViewController)
             {
-                
+                if let dis = g?.degreeDistribution
+                {
+                    dest.degreeDistriArray = dis
+                }
             }
             
             if let dest = (tab.viewControllers?[3] as? GraphInfoViewController)
