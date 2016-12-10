@@ -8,10 +8,10 @@
 
 import Foundation
 
-public class Square: RGG
+open class Square: RGG
 {    
     //create vertices in unit square (x in [0,1], y in [0,1])
-    override func createVertices(nV: Int)
+    override func createVertices(_ nV: Int)
     {
         for i in 0...(nV-1)
         {

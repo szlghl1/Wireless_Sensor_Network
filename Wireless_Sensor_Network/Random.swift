@@ -23,7 +23,7 @@ public extension Double {
      
      - returns: Float
      */
-    public static func random(min: Double, max: Double) -> Double {
+    public static func random(_ min: Double, max: Double) -> Double {
         return Double.random * (max - min) + min
     }
 }
@@ -34,7 +34,7 @@ public extension Float {
             return Float(arc4random()) / 0xFFFFFFFF
         }
     }
-    public static func random(min: Float, max: Float) -> Float {
+    public static func random(_ min: Float, max: Float) -> Float {
         return Float.random * (max - min) + min
     }
 }

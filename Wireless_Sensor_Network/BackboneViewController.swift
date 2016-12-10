@@ -20,7 +20,7 @@ class BackboneViewController: UIViewController {
     let nodeForLine = SCNNode()//all lines are under this node
     let nodeForOffset = SCNNode()//all edges and sphere are under this node
     
-    @IBAction func switchBackbone(sender: UISegmentedControl)
+    @IBAction func switchBackbone(_ sender: UISegmentedControl)
     {
         if sender.selectedSegmentIndex == 0{
             b1Node.removeFromParentNode()
@@ -36,13 +36,13 @@ class BackboneViewController: UIViewController {
     {
         super.viewDidLoad()
         initSCNNodeForBackbone()
-        if shape == .Square{
+        if shape == .square{
             nodeForOffset.position = SCNVector3Make(-0.5, -0.5, 0)
         }
         nodeForOffset.addChildNode(b0Node)
 
         glLineWidth(2)
-        backboneView.backgroundColor = UIColor.blackColor()
+        backboneView.backgroundColor = UIColor.black
         backboneView.allowsCameraControl = true
         let sceneInstance = SCNScene()
         

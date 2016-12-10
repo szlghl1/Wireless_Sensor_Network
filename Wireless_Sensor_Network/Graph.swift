@@ -8,8 +8,8 @@
 
 import Foundation
 
-public class Graph {
-    public var vertices = [Vertex]()
+open class Graph {
+    open var vertices = [Vertex]()
     lazy var nVertices:Int = {self.vertices.count}()
     lazy var nEdges:Int =
     {
@@ -83,16 +83,16 @@ public class Graph {
         return res
     }()
     lazy var colorDistribution:[Int] = {
-        var res = [Int](count: self.numColor, repeatedValue: 0)
+        var res = [Int](repeating: 0, count: self.numColor)
         for v in self.vertices{
-            res[v.color]++
+            res[v.color] += 1
         }
         return res
     }()
     lazy var degreeDistribution:[Int] = {
-        var res = [Int](count: self.maxDegree + 1, repeatedValue: 0)
+        var res = [Int](repeating: 0, count: self.maxDegree + 1)
         for v in self.vertices{
-            res[v.degree]++
+            res[v.degree] += 1
         }
         return res
     }()

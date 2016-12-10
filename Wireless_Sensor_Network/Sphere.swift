@@ -8,10 +8,10 @@
 
 import Foundation
 
-public class Sphere: RGG
+open class Sphere: RGG
 {
     //create vertices in unit sphere (x, y, z in [-1,1])
-    override func createVertices(nV:Int)
+    override func createVertices(_ nV:Int)
     {
         for i in 0...(nV-1)
         {

@@ -8,9 +8,9 @@
 
 import Foundation
 
-func square(a:Float) -> Float {return a * a}
+func square(_ a:Float) -> Float {return a * a}
 
-public class RGG: Graph {
+open class RGG: Graph {
     //distance therehold for edge gernerating
     let radius:Float
     
@@ -30,7 +30,7 @@ public class RGG: Graph {
         {
             colorArray[v.color].idArray.append(v.id)
         }
-        colorArray.sortInPlace({$0.idArray.count > $1.idArray.count})
+        colorArray.sort(by: {$0.idArray.count > $1.idArray.count})
         let b0IDs = colorArray[0].idArray + colorArray[1].idArray
         let b1IDs = colorArray[0].idArray + colorArray[2].idArray
         var b0 = [Vertex]()
@@ -60,7 +60,7 @@ public class RGG: Graph {
         createEdges()
         color()
     }
-    func createVertices(nV: Int)
+    func createVertices(_ nV: Int)
     {
         preconditionFailure("createVertices should be implemented in subclass of RGG")
     }
@@ -72,7 +72,7 @@ public class RGG: Graph {
         {
             preconditionFailure("There should be at least one vertex.")
         }
-        var copyVertices = vertices.sort({$0.x < $1.x})
+        var copyVertices = vertices.sorted(by: {$0.x < $1.x})
         let window = radius
         for i in 1...(copyVertices.count-1)
         {
@@ -87,10 +87,10 @@ public class RGG: Graph {
                     let id_j = copyVertices[j].id
                     vertices[id_i].adjArray.append(id_j)
                     vertices[id_j].adjArray.append(id_i)
-                    vertices[id_i].degree++
-                    vertices[id_j].degree++
+                    vertices[id_i].degree += 1
+                    vertices[id_j].degree += 1
                 }
-                j--
+                j -= 1
             }
             j = i + 1
         }
@@ -100,7 +100,7 @@ public class RGG: Graph {
     Pass two vertices as parameters, determine
     if their distance is equal or less than radius
      ********************************/
-    func ifAdajacent(v1:Vertex, v2:Vertex) -> Bool
+    func ifAdajacent(_ v1:Vertex, v2:Vertex) -> Bool
     {
         let disSq = square(v1.x - v2.x) + square(v1.y - v2.y) + square(v1.z - v2.z)
         return disSq <= square(radius)
@@ -122,7 +122,7 @@ public class RGG: Graph {
             }
         }
         
-        var degreeArray = Array(count: maxDegree + 1, repeatedValue: [Vertex]())
+        var degreeArray = Array(repeating: [Vertex](), count: maxDegree + 1)
         for v in verticesIndex
         {
             degreeArray[v.degree].append(v)
@@ -156,7 +156,7 @@ public class RGG: Graph {
             let v = degreeArray[i][0]
             removeVertex(v)
             s.push(v)
-            degreeArray[i].removeAtIndex(0)
+            degreeArray[i].remove(at: 0)
         }
         return s
     }
@@ -180,7 +180,7 @@ public class RGG: Graph {
             {
                 usedColor.append(self.vertices[adjID].color)
             }
-            usedColor.sortInPlace()
+            usedColor.sort()
             for i in 0...usedColor.count - 1
             {
                 if usedColor[i] != i

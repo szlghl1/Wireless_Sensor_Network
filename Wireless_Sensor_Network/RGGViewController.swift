@@ -21,7 +21,7 @@ class RGGViewController: UIViewController {
         let maxV = self.graphToDraw!.maxVertex
         let n = SCNNode()
         let sphere = SCNSphere(radius: 0.1)
-        sphere.firstMaterial?.diffuse.contents = UIColor.whiteColor()
+        sphere.firstMaterial?.diffuse.contents = UIColor.white
         let sphereNode1 = SCNNode(geometry: sphere)
         sphereNode1.position = SCNVector3Make(minV.x, minV.y, minV.z)
         let sphereNode2 = SCNNode(geometry: sphere)
@@ -32,8 +32,8 @@ class RGGViewController: UIViewController {
     }()
     
     
-    @IBAction func highlightSwitchChange(sender: UISwitch) {
-        if sender.on
+    @IBAction func highlightSwitchChange(_ sender: UISwitch) {
+        if sender.isOn
         {
             nodeForOffset.addChildNode(nodeForHighlight)
         }else{
@@ -41,12 +41,12 @@ class RGGViewController: UIViewController {
         }
     }
     
-    @IBAction func edgeSwitchChange(sender: UISwitch) {
-        if sender.on
+    @IBAction func edgeSwitchChange(_ sender: UISwitch) {
+        if sender.isOn
         {
             nodeForOffset.addChildNode(nodeForLine)
         }
-        if !sender.on
+        if !sender.isOn
         {
             nodeForLine.removeFromParentNode()
         }
@@ -70,7 +70,7 @@ class RGGViewController: UIViewController {
             return
         }
         glLineWidth(2)
-        sceneView.backgroundColor = UIColor.blackColor()
+        sceneView.backgroundColor = UIColor.black
         sceneView.allowsCameraControl = true
         let sceneInstance = SCNScene()
         

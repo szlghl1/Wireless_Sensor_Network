@@ -10,7 +10,7 @@ import Foundation
 
 struct Stack<Element> {
     var items = [Element]()
-    mutating func push(item: Element) {
+    mutating func push(_ item: Element) {
         items.append(item)
     }
     mutating func pop() -> Element {

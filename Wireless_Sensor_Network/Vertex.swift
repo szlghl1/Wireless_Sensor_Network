@@ -7,12 +7,12 @@
 //
 
 import Foundation
-public class Vertex {
-    public let x:Float, y:Float, z:Float
-    public let id:Int
-    public var color:Int = 0
-    public var adjArray = [Int]()
-    public var degree = 0
+open class Vertex {
+    open let x:Float, y:Float, z:Float
+    open let id:Int
+    open var color:Int = 0
+    open var adjArray = [Int]()
+    open var degree = 0
     
     init(id:Int, x:Float, y:Float, z:Float = 0)
     {
@@ -36,9 +36,9 @@ public class Vertex {
         return Vertex(self)
     }
     
-    func deleteAdjByID(id:Int)
+    func deleteAdjByID(_ id:Int)
     {
         self.adjArray = self.adjArray.filter({$0 != id})
-        self.degree--
+        self.degree -= 1
     }
 }

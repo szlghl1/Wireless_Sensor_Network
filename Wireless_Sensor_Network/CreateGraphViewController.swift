@@ -25,9 +25,9 @@ class CreateGraphViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if let tab = segue.destinationViewController as? TabBarViewController
+        if let tab = segue.destination as? TabBarViewController
         {
             var g:RGG?
             let avgD = Int(avgDegreeText.text!)!
@@ -37,13 +37,13 @@ class CreateGraphViewController: UIViewController {
             {
             case 0:
                 g = Disk(avgDegree: avgD, numberOfVertices: nV)
-                shape = .Disk
+                shape = .disk
             case 1:
                 g = Square(avgDegree: avgD, numberOfVertices: nV)
-                shape = .Square
+                shape = .square
             case 2:
                 g = Sphere(avgDegree: avgD, numberOfVertices: nV)
-                shape = .Sphere
+                shape = .sphere
             default:
                 break
             }

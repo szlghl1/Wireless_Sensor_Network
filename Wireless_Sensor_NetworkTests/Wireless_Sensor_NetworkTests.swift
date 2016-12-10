@@ -8,7 +8,6 @@
 
 import XCTest
 @testable import Wireless_Sensor_Network
-
 class Wireless_Sensor_NetworkTests: XCTestCase {
     
     override func setUp() {
@@ -41,7 +40,7 @@ class Wireless_Sensor_NetworkTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

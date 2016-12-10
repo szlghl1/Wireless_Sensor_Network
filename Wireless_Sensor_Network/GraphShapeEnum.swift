@@ -10,7 +10,7 @@ import Foundation
 
 enum GraphShapeEnum
 {
-    case Disk
-    case Sphere
-    case Square
+    case disk
+    case sphere
+    case square
 }

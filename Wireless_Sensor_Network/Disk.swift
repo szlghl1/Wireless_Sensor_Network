@@ -8,10 +8,10 @@
 
 import Foundation
 
-public class Disk: RGG
+open class Disk: RGG
 {
     //create vertices in unit disk(r = 1)
-    override func createVertices(nV: Int)
+    override func createVertices(_ nV: Int)
     {
         for i in 0...(nV-1)
         {
