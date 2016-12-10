@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		455C09B41DFB8E6900790F50 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C09B31DFB8E6900790F50 /* Graph.swift */; };
+		455C09B61DFB9FEC00790F50 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C09B51DFB9FEC00790F50 /* RandomColor.swift */; };
 		456025EE1DF7F7AF00E86E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */; };
 		456025F01DF7F7AF00E86E1D /* RGGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */; };
 		456025F31DF7F7AF00E86E1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456025F11DF7F7AF00E86E1D /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		455C09B31DFB8E6900790F50 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		455C09B51DFB9FEC00790F50 /* RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
 		456025EA1DF7F7AF00E86E1D /* Wireless_Sensor_Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wireless_Sensor_Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGGViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */,
 				45C8F1BD1DFA88FC001C3685 /* ChartsViewController.swift */,
 				45C8F1BF1DFA8A2F001C3685 /* GraphShapeEnum.swift */,
+				455C09B51DFB9FEC00790F50 /* RandomColor.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				456026121DF7F7F900E86E1D /* RGG.swift in Sources */,
 				4560261B1DF81F1400E86E1D /* Stack.swift in Sources */,
 				456026111DF7F7F900E86E1D /* Disk.swift in Sources */,
+				455C09B61DFB9FEC00790F50 /* RandomColor.swift in Sources */,
 				456026151DF8000400E86E1D /* Random.swift in Sources */,
 				456026171DF80F4E00E86E1D /* Square.swift in Sources */,
 				45C8F1BA1DFA88A8001C3685 /* GraphInfoViewController.swift in Sources */,

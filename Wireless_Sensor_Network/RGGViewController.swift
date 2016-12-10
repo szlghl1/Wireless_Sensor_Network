@@ -12,7 +12,6 @@ import SceneKit
 class RGGViewController: UIViewController {
     @IBOutlet weak var highlightSwitch: UISwitch!
     @IBOutlet weak var sceneView: SCNView!
-    var colorMap = [Int: (CGFloat,CGFloat,CGFloat)]()
     
     var graphToDraw:RGG?
     let nodeForLine = SCNNode()//all lines are under this node
@@ -96,7 +95,7 @@ class RGGViewController: UIViewController {
         for v in graphToDraw!.vertices
         {
             let sphere = SCNSphere(radius: 0.03)
-            sphere.firstMaterial?.diffuse.contents = getColor(v.color)
+            sphere.firstMaterial?.diffuse.contents = RandomColor.getColor(v.color)
             let sphereNode = SCNNode(geometry: sphere)
             sphereNode.position = SCNVector3Make(v.x, v.y, v.z)
             nodeForOffset.addChildNode(sphereNode)
@@ -111,20 +110,7 @@ class RGGViewController: UIViewController {
         sceneView.scene = sceneInstance
         sceneView.autoenablesDefaultLighting = true
     }
-    
-    func getColor(c: Int) -> UIColor
-    {
-        if colorMap[c] == nil
-        {
-            let r = CGFloat(drand48())
-            let g = CGFloat(drand48())
-            let b = CGFloat(drand48())
-            colorMap[c] = (r, g, b)
-        }
-        let t = colorMap[c]!
-        return UIColor(red: t.0, green: t.1, blue: t.2, alpha: 1)
-    }
-    
+
     func getLineNode(v1: Vertex, v2: Vertex) -> SCNNode
     {
         let positions: [Float32] = [Float32(v1.x), Float32(v1.y), Float32(v1.z), Float32(v2.x), Float32(v2.y), Float32(v2.z)]

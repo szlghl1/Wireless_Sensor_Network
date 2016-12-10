@@ -50,7 +50,21 @@ class CreateGraphViewController: UIViewController {
             
             if let dest = (tab.viewControllers?[1] as? BackboneViewController)
             {
-                
+                var b1 = [Vertex]()
+                var b2 = [Vertex]()
+                if let twoBs = g?.twoBackbones
+                {
+                    for id in twoBs.b1IdArray
+                    {
+                        b1.append(g!.vertices[id])
+                    }
+                    for id in twoBs.b2IdArray
+                    {
+                        b2.append(g!.vertices[id])
+                    }
+                }
+                dest.backbone0 = b1
+                dest.backbone1 = b2
             }
             
             if let dest = (tab.viewControllers?[2] as? ChartsViewController)

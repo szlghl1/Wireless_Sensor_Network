@@ -11,7 +11,29 @@ import Foundation
 func square(a:Float) -> Float {return a * a}
 
 public class RGG: Graph {
+    //distance therehold for edge gernerating
     let radius:Float
+    
+    lazy var twoBackbones: (b1IdArray: [Int], b2IdArray: [Int]) =
+    {
+        if(self.numColor < 4)
+        {
+            return ([Int](),[Int]())
+        }
+        var colorArray = [(color:Int, idArray: [Int])]()
+        for i in 0...self.numColor-1
+        {
+            colorArray.append((i, [Int]()))
+        }
+        for v in self.vertices
+        {
+            colorArray[v.color].idArray.append(v.id)
+        }
+        colorArray.sortInPlace({$0.idArray.count > $1.idArray.count})
+        let b1 = colorArray[0].idArray + colorArray[1].idArray
+        let b2 = colorArray[0].idArray + colorArray[2].idArray
+        return (b1, b2)
+    }()
     public init(avgDegree: Int, numberOfVertices: Int)
     {
         let r = sqrt(Float(avgDegree) / Float(numberOfVertices))

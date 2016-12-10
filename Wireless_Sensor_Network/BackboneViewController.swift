@@ -7,15 +7,24 @@
 //
 
 import UIKit
-
+import SceneKit
 class BackboneViewController: UIViewController {
     var backbone0: [Vertex]?
     var backbone1: [Vertex]?
-
-    override func viewDidLoad() {
+    
+    let nodeForLine = SCNNode()//all lines are under this node
+    let nodeForOffset = SCNNode()//all edges and sphere are under this node
+    
+    @IBAction func switchBackbone(sender: UISegmentedControl)
+    {
+        
+    }
+    @IBOutlet weak var backboneView: SCNView!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
