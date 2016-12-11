@@ -98,9 +98,9 @@ open class RGG: Graph {
         b1 = findLargestComponent(b: b1, bDict: b1Dict)
         return (b0,b1)
     }()
-    public init(avgDegree: Int, numberOfVertices: Int)
+
+    public init(r: Float, numberOfVertices: Int)
     {
-        let r = sqrt(Float(avgDegree) / Float(numberOfVertices))
         if(r < 0 || numberOfVertices < 1)
         {
             preconditionFailure("incorrect parameters")
@@ -111,6 +111,7 @@ open class RGG: Graph {
         createEdges()
         color()
     }
+    
     func createVertices(_ nV: Int)
     {
         preconditionFailure("createVertices should be implemented in subclass of RGG")
