@@ -24,14 +24,27 @@ class CreateGraphViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if (avgDegreeText.text?.isEmpty)!{
+            let v = UIAlertController(title: "Empty parameter", message: "You should fill the parameters.", preferredStyle: .alert)
+            let act = UIAlertAction(title: "return", style: .cancel, handler: nil)
+            v.addAction(act)
+            self.present(v, animated: true, completion: nil)
+            return false
+        }
+        return true
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if let tab = segue.destination as? TabBarViewController
         {
             var g:RGG?
+            
+            //validation is done in shouldSegue
             let avgD = Int(avgDegreeText.text!)!
             let nV = Int(nVerText.text!)!
+            
             var shape: GraphShapeEnum?
             switch shapeSegCtrl.selectedSegmentIndex
             {

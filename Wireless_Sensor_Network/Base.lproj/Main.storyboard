@@ -23,16 +23,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QSp-Wm-tkN" userLabel="Stack Edges">
-                                <rect key="frame" x="32" y="115" width="311.5" height="31"/>
+                                <rect key="frame" x="32" y="115" width="312" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highlight Max/Min Degree Vertex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIC-K7-Uye">
-                                        <rect key="frame" x="0.0" y="0.0" width="252.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="253" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lut-8T-Tkt">
-                                        <rect key="frame" x="262.5" y="0.0" width="51" height="31"/>
+                                        <rect key="frame" x="263" y="0.0" width="51" height="31"/>
                                         <connections>
                                             <action selector="highlightSwitchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="VbB-5h-j70"/>
                                         </connections>
@@ -101,16 +101,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Y0l-IR-Jya">
-                                <rect key="frame" x="30" y="150" width="323" height="300"/>
+                                <rect key="frame" x="31" y="208.5" width="313" height="250"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shape:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQK-2I-Q02">
-                                        <rect key="frame" x="0.0" y="0.0" width="323" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="313" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8kb-5Q-Cvz">
-                                        <rect key="frame" x="0.0" y="40.5" width="323" height="29"/>
+                                        <rect key="frame" x="0.0" y="32.5" width="313" height="29"/>
                                         <segments>
                                             <segment title="Disk"/>
                                             <segment title="Square"/>
@@ -118,29 +118,29 @@
                                         </segments>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Num. of Vertices" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4Y-qB-yrj">
-                                        <rect key="frame" x="0.0" y="88.5" width="323" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="72" width="313" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="la8-Lf-gAz">
-                                        <rect key="frame" x="0.0" y="129.5" width="323" height="30"/>
+                                        <rect key="frame" x="0.0" y="104.5" width="313" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg. Degree" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzL-n8-jfD">
-                                        <rect key="frame" x="0.0" y="179.5" width="323" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="146" width="313" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AIr-mz-ucv">
-                                        <rect key="frame" x="0.0" y="220" width="323" height="30"/>
+                                        <rect key="frame" x="0.0" y="178.5" width="313" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0M-hG-s8K">
-                                        <rect key="frame" x="0.0" y="270" width="323" height="30"/>
+                                        <rect key="frame" x="0.0" y="220" width="313" height="30"/>
                                         <state key="normal" title="Submit"/>
                                         <connections>
                                             <segue destination="yqD-TJ-qFF" kind="show" id="822-fW-fgm"/>
@@ -148,17 +148,15 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="Mwt-MF-ZJg"/>
+                                    <constraint firstAttribute="height" constant="250" id="Mwt-MF-ZJg"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Y0l-IR-Jya" secondAttribute="trailing" constant="6" id="IdF-Js-LeG"/>
-                            <constraint firstItem="rSI-l6-LXf" firstAttribute="top" secondItem="Y0l-IR-Jya" secondAttribute="bottom" priority="999" constant="217" id="LdQ-Jd-4ts"/>
-                            <constraint firstItem="Y0l-IR-Jya" firstAttribute="top" secondItem="pOD-fe-YrS" secondAttribute="bottom" priority="999" constant="86" id="UC4-XM-YGx"/>
-                            <constraint firstItem="Y0l-IR-Jya" firstAttribute="centerY" secondItem="RDW-OB-3F1" secondAttribute="centerY" constant="-33.5" id="aod-ju-iev"/>
-                            <constraint firstItem="Y0l-IR-Jya" firstAttribute="leading" secondItem="RDW-OB-3F1" secondAttribute="leadingMargin" constant="14" id="zbf-aE-Fdb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y0l-IR-Jya" secondAttribute="trailing" constant="15" id="IdF-Js-LeG"/>
+                            <constraint firstItem="Y0l-IR-Jya" firstAttribute="centerY" secondItem="RDW-OB-3F1" secondAttribute="centerY" id="aod-ju-iev"/>
+                            <constraint firstItem="Y0l-IR-Jya" firstAttribute="leading" secondItem="RDW-OB-3F1" secondAttribute="leadingMargin" constant="15" id="zbf-aE-Fdb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Type in your parameters for RGG" id="sSo-Iy-Nnu"/>
