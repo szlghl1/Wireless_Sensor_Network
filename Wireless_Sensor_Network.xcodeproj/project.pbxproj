@@ -11,29 +11,29 @@
 		452A43141DFCD2FE003B25B8 /* TabbarIconChart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 452A43101DFCD2FE003B25B8 /* TabbarIconChart@2x.png */; };
 		452A43151DFCD2FE003B25B8 /* TabbarIconImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 452A43111DFCD2FE003B25B8 /* TabbarIconImage@2x.png */; };
 		452A43161DFCD2FE003B25B8 /* TabbarIconInfo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 452A43121DFCD2FE003B25B8 /* TabbarIconInfo@2x.png */; };
-		455C09B41DFB8E6900790F50 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C09B31DFB8E6900790F50 /* Graph.swift */; };
-		455C09B61DFB9FEC00790F50 /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C09B51DFB9FEC00790F50 /* Draw.swift */; };
+		45590AD21DFCF45D000B38F0 /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590ACA1DFCF45D000B38F0 /* Disk.swift */; };
+		45590AD31DFCF45D000B38F0 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590ACB1DFCF45D000B38F0 /* Graph.swift */; };
+		45590AD41DFCF45D000B38F0 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590ACC1DFCF45D000B38F0 /* Random.swift */; };
+		45590AD51DFCF45D000B38F0 /* RGG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590ACD1DFCF45D000B38F0 /* RGG.swift */; };
+		45590AD61DFCF45D000B38F0 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590ACE1DFCF45D000B38F0 /* Sphere.swift */; };
+		45590AD71DFCF45D000B38F0 /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590ACF1DFCF45D000B38F0 /* Square.swift */; };
+		45590AD81DFCF45D000B38F0 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590AD01DFCF45D000B38F0 /* Stack.swift */; };
+		45590AD91DFCF45D000B38F0 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590AD11DFCF45D000B38F0 /* Vertex.swift */; };
+		45590AE21DFCF46A000B38F0 /* BackboneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590ADA1DFCF46A000B38F0 /* BackboneViewController.swift */; };
+		45590AE31DFCF46A000B38F0 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590ADB1DFCF46A000B38F0 /* ChartsViewController.swift */; };
+		45590AE41DFCF46A000B38F0 /* CreateGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590ADC1DFCF46A000B38F0 /* CreateGraphViewController.swift */; };
+		45590AE51DFCF46A000B38F0 /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590ADD1DFCF46A000B38F0 /* Draw.swift */; };
+		45590AE61DFCF46A000B38F0 /* GraphInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590ADE1DFCF46A000B38F0 /* GraphInfoViewController.swift */; };
+		45590AE71DFCF46B000B38F0 /* GraphShapeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590ADF1DFCF46A000B38F0 /* GraphShapeEnum.swift */; };
+		45590AE81DFCF46B000B38F0 /* RGGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590AE01DFCF46A000B38F0 /* RGGViewController.swift */; };
+		45590AE91DFCF46B000B38F0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45590AE11DFCF46A000B38F0 /* TabBarViewController.swift */; };
 		456025EE1DF7F7AF00E86E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */; };
-		456025F01DF7F7AF00E86E1D /* RGGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */; };
 		456025F31DF7F7AF00E86E1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456025F11DF7F7AF00E86E1D /* Main.storyboard */; };
 		456025F51DF7F7AF00E86E1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 456025F41DF7F7AF00E86E1D /* Assets.xcassets */; };
 		456025F81DF7F7AF00E86E1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456025F61DF7F7AF00E86E1D /* LaunchScreen.storyboard */; };
 		456026031DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026021DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.swift */; };
-		456026111DF7F7F900E86E1D /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560260E1DF7F7F900E86E1D /* Disk.swift */; };
-		456026121DF7F7F900E86E1D /* RGG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560260F1DF7F7F900E86E1D /* RGG.swift */; };
-		456026131DF7F7F900E86E1D /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026101DF7F7F900E86E1D /* Vertex.swift */; };
-		456026151DF8000400E86E1D /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026141DF8000400E86E1D /* Random.swift */; };
-		456026171DF80F4E00E86E1D /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026161DF80F4E00E86E1D /* Square.swift */; };
-		456026191DF8107200E86E1D /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456026181DF8107200E86E1D /* Sphere.swift */; };
-		4560261B1DF81F1400E86E1D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560261A1DF81F1400E86E1D /* Stack.swift */; };
 		45C3217F1DFC028D004AA363 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C3217A1DFC0286004AA363 /* Charts.framework */; };
 		45C321801DFC028D004AA363 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45C3217A1DFC0286004AA363 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		45C3218A1DFC066A004AA363 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C321891DFC066A004AA363 /* TabBarViewController.swift */; };
-		45C8F1B81DFA87CD001C3685 /* BackboneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1B71DFA87CD001C3685 /* BackboneViewController.swift */; };
-		45C8F1BA1DFA88A8001C3685 /* GraphInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1B91DFA88A8001C3685 /* GraphInfoViewController.swift */; };
-		45C8F1BC1DFA88BD001C3685 /* CreateGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1BB1DFA88BD001C3685 /* CreateGraphViewController.swift */; };
-		45C8F1BE1DFA88FC001C3685 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1BD1DFA88FC001C3685 /* ChartsViewController.swift */; };
-		45C8F1C01DFA8A2F001C3685 /* GraphShapeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F1BF1DFA8A2F001C3685 /* GraphShapeEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,11 +93,24 @@
 		452A43101DFCD2FE003B25B8 /* TabbarIconChart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabbarIconChart@2x.png"; path = "TabbarIcons/TabbarIconChart@2x.png"; sourceTree = "<group>"; };
 		452A43111DFCD2FE003B25B8 /* TabbarIconImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabbarIconImage@2x.png"; path = "TabbarIcons/TabbarIconImage@2x.png"; sourceTree = "<group>"; };
 		452A43121DFCD2FE003B25B8 /* TabbarIconInfo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabbarIconInfo@2x.png"; path = "TabbarIcons/TabbarIconInfo@2x.png"; sourceTree = "<group>"; };
-		455C09B31DFB8E6900790F50 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
-		455C09B51DFB9FEC00790F50 /* Draw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
+		45590ACA1DFCF45D000B38F0 /* Disk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Disk.swift; path = GraphModel/Disk.swift; sourceTree = "<group>"; };
+		45590ACB1DFCF45D000B38F0 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Graph.swift; path = GraphModel/Graph.swift; sourceTree = "<group>"; };
+		45590ACC1DFCF45D000B38F0 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Random.swift; path = GraphModel/Random.swift; sourceTree = "<group>"; };
+		45590ACD1DFCF45D000B38F0 /* RGG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RGG.swift; path = GraphModel/RGG.swift; sourceTree = "<group>"; };
+		45590ACE1DFCF45D000B38F0 /* Sphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sphere.swift; path = GraphModel/Sphere.swift; sourceTree = "<group>"; };
+		45590ACF1DFCF45D000B38F0 /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Square.swift; path = GraphModel/Square.swift; sourceTree = "<group>"; };
+		45590AD01DFCF45D000B38F0 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = GraphModel/Stack.swift; sourceTree = "<group>"; };
+		45590AD11DFCF45D000B38F0 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Vertex.swift; path = GraphModel/Vertex.swift; sourceTree = "<group>"; };
+		45590ADA1DFCF46A000B38F0 /* BackboneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackboneViewController.swift; path = ViewController/BackboneViewController.swift; sourceTree = "<group>"; };
+		45590ADB1DFCF46A000B38F0 /* ChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartsViewController.swift; path = ViewController/ChartsViewController.swift; sourceTree = "<group>"; };
+		45590ADC1DFCF46A000B38F0 /* CreateGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateGraphViewController.swift; path = ViewController/CreateGraphViewController.swift; sourceTree = "<group>"; };
+		45590ADD1DFCF46A000B38F0 /* Draw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Draw.swift; path = ViewController/Draw.swift; sourceTree = "<group>"; };
+		45590ADE1DFCF46A000B38F0 /* GraphInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphInfoViewController.swift; path = ViewController/GraphInfoViewController.swift; sourceTree = "<group>"; };
+		45590ADF1DFCF46A000B38F0 /* GraphShapeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphShapeEnum.swift; path = ViewController/GraphShapeEnum.swift; sourceTree = "<group>"; };
+		45590AE01DFCF46A000B38F0 /* RGGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RGGViewController.swift; path = ViewController/RGGViewController.swift; sourceTree = "<group>"; };
+		45590AE11DFCF46A000B38F0 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = ViewController/TabBarViewController.swift; sourceTree = "<group>"; };
 		456025EA1DF7F7AF00E86E1D /* Wireless_Sensor_Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wireless_Sensor_Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGGViewController.swift; sourceTree = "<group>"; };
 		456025F21DF7F7AF00E86E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		456025F41DF7F7AF00E86E1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		456025F71DF7F7AF00E86E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,20 +118,7 @@
 		456025FE1DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Wireless_Sensor_NetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		456026021DF7F7AF00E86E1D /* Wireless_Sensor_NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wireless_Sensor_NetworkTests.swift; sourceTree = "<group>"; };
 		456026041DF7F7AF00E86E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4560260E1DF7F7F900E86E1D /* Disk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
-		4560260F1DF7F7F900E86E1D /* RGG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGG.swift; sourceTree = "<group>"; };
-		456026101DF7F7F900E86E1D /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
-		456026141DF8000400E86E1D /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
-		456026161DF80F4E00E86E1D /* Square.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
-		456026181DF8107200E86E1D /* Sphere.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
-		4560261A1DF81F1400E86E1D /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		45C321731DFC0285004AA363 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
-		45C321891DFC066A004AA363 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		45C8F1B71DFA87CD001C3685 /* BackboneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackboneViewController.swift; sourceTree = "<group>"; };
-		45C8F1B91DFA88A8001C3685 /* GraphInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphInfoViewController.swift; sourceTree = "<group>"; };
-		45C8F1BB1DFA88BD001C3685 /* CreateGraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGraphViewController.swift; sourceTree = "<group>"; };
-		45C8F1BD1DFA88FC001C3685 /* ChartsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
-		45C8F1BF1DFA8A2F001C3685 /* GraphShapeEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphShapeEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,14 +197,14 @@
 		4560260D1DF7F7E600E86E1D /* GraphModel */ = {
 			isa = PBXGroup;
 			children = (
-				456026101DF7F7F900E86E1D /* Vertex.swift */,
-				455C09B31DFB8E6900790F50 /* Graph.swift */,
-				4560260F1DF7F7F900E86E1D /* RGG.swift */,
-				4560260E1DF7F7F900E86E1D /* Disk.swift */,
-				456026161DF80F4E00E86E1D /* Square.swift */,
-				456026181DF8107200E86E1D /* Sphere.swift */,
-				456026141DF8000400E86E1D /* Random.swift */,
-				4560261A1DF81F1400E86E1D /* Stack.swift */,
+				45590ACA1DFCF45D000B38F0 /* Disk.swift */,
+				45590ACB1DFCF45D000B38F0 /* Graph.swift */,
+				45590ACC1DFCF45D000B38F0 /* Random.swift */,
+				45590ACD1DFCF45D000B38F0 /* RGG.swift */,
+				45590ACE1DFCF45D000B38F0 /* Sphere.swift */,
+				45590ACF1DFCF45D000B38F0 /* Square.swift */,
+				45590AD01DFCF45D000B38F0 /* Stack.swift */,
+				45590AD11DFCF45D000B38F0 /* Vertex.swift */,
 			);
 			name = GraphModel;
 			sourceTree = "<group>";
@@ -222,14 +222,14 @@
 		45C8F1B21DFA86C5001C3685 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */,
-				45C8F1B71DFA87CD001C3685 /* BackboneViewController.swift */,
-				45C8F1BD1DFA88FC001C3685 /* ChartsViewController.swift */,
-				45C8F1B91DFA88A8001C3685 /* GraphInfoViewController.swift */,
-				45C8F1BB1DFA88BD001C3685 /* CreateGraphViewController.swift */,
-				45C8F1BF1DFA8A2F001C3685 /* GraphShapeEnum.swift */,
-				455C09B51DFB9FEC00790F50 /* Draw.swift */,
-				45C321891DFC066A004AA363 /* TabBarViewController.swift */,
+				45590ADA1DFCF46A000B38F0 /* BackboneViewController.swift */,
+				45590ADB1DFCF46A000B38F0 /* ChartsViewController.swift */,
+				45590ADC1DFCF46A000B38F0 /* CreateGraphViewController.swift */,
+				45590ADD1DFCF46A000B38F0 /* Draw.swift */,
+				45590ADE1DFCF46A000B38F0 /* GraphInfoViewController.swift */,
+				45590ADF1DFCF46A000B38F0 /* GraphShapeEnum.swift */,
+				45590AE01DFCF46A000B38F0 /* RGGViewController.swift */,
+				45590AE11DFCF46A000B38F0 /* TabBarViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -375,22 +375,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45C8F1BE1DFA88FC001C3685 /* ChartsViewController.swift in Sources */,
-				456026121DF7F7F900E86E1D /* RGG.swift in Sources */,
-				4560261B1DF81F1400E86E1D /* Stack.swift in Sources */,
-				456026111DF7F7F900E86E1D /* Disk.swift in Sources */,
-				455C09B61DFB9FEC00790F50 /* Draw.swift in Sources */,
-				456026151DF8000400E86E1D /* Random.swift in Sources */,
-				456026171DF80F4E00E86E1D /* Square.swift in Sources */,
-				45C8F1BA1DFA88A8001C3685 /* GraphInfoViewController.swift in Sources */,
-				456025F01DF7F7AF00E86E1D /* RGGViewController.swift in Sources */,
-				45C3218A1DFC066A004AA363 /* TabBarViewController.swift in Sources */,
-				455C09B41DFB8E6900790F50 /* Graph.swift in Sources */,
-				45C8F1BC1DFA88BD001C3685 /* CreateGraphViewController.swift in Sources */,
-				45C8F1C01DFA8A2F001C3685 /* GraphShapeEnum.swift in Sources */,
-				456026131DF7F7F900E86E1D /* Vertex.swift in Sources */,
-				45C8F1B81DFA87CD001C3685 /* BackboneViewController.swift in Sources */,
-				456026191DF8107200E86E1D /* Sphere.swift in Sources */,
+				45590AD91DFCF45D000B38F0 /* Vertex.swift in Sources */,
+				45590AE81DFCF46B000B38F0 /* RGGViewController.swift in Sources */,
+				45590AE51DFCF46A000B38F0 /* Draw.swift in Sources */,
+				45590AE31DFCF46A000B38F0 /* ChartsViewController.swift in Sources */,
+				45590AE61DFCF46A000B38F0 /* GraphInfoViewController.swift in Sources */,
+				45590AD71DFCF45D000B38F0 /* Square.swift in Sources */,
+				45590AD61DFCF45D000B38F0 /* Sphere.swift in Sources */,
+				45590AD51DFCF45D000B38F0 /* RGG.swift in Sources */,
+				45590AD21DFCF45D000B38F0 /* Disk.swift in Sources */,
+				45590AE91DFCF46B000B38F0 /* TabBarViewController.swift in Sources */,
+				45590AD31DFCF45D000B38F0 /* Graph.swift in Sources */,
+				45590AE71DFCF46B000B38F0 /* GraphShapeEnum.swift in Sources */,
+				45590AE41DFCF46A000B38F0 /* CreateGraphViewController.swift in Sources */,
+				45590AD41DFCF45D000B38F0 /* Random.swift in Sources */,
+				45590AE21DFCF46A000B38F0 /* BackboneViewController.swift in Sources */,
+				45590AD81DFCF45D000B38F0 /* Stack.swift in Sources */,
 				456025EE1DF7F7AF00E86E1D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
