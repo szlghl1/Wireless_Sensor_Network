@@ -283,7 +283,7 @@
                             <constraint firstItem="30X-TE-g8C" firstAttribute="leading" secondItem="imX-XS-EJ1" secondAttribute="leading" id="jfU-BE-4vm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Charts" image="TabbarIconInfo.png" id="gj0-Ls-iky"/>
+                    <tabBarItem key="tabBarItem" title="Charts" image="TabbarIconChart.png" id="gj0-Ls-iky"/>
                     <connections>
                         <outlet property="colorDistriView" destination="g28-jm-E1c" id="SQ9-mQ-uCa"/>
                         <outlet property="compareDegreeView" destination="FKt-hv-wYt" id="JnC-57-zpc"/>
@@ -321,7 +321,7 @@
                             <constraint firstItem="kzi-37-fC3" firstAttribute="top" secondItem="k5t-rG-srq" secondAttribute="bottom" constant="10" id="wsM-Ay-vDA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Info" id="Xjd-NL-J0y"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="TabbarIconInfo.png" id="Xjd-NL-J0y"/>
                     <connections>
                         <outlet property="infoLabel" destination="kzi-37-fC3" id="bwE-iG-vsD"/>
                     </connections>
@@ -349,6 +349,7 @@
     </scenes>
     <resources>
         <image name="TabbarIconBone.png" width="25" height="25"/>
+        <image name="TabbarIconChart.png" width="25" height="25"/>
         <image name="TabbarIconImage.png" width="25" height="25"/>
         <image name="TabbarIconInfo.png" width="25" height="25"/>
     </resources>
