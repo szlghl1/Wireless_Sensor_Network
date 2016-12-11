@@ -9,6 +9,7 @@
 import Foundation
 
 open class Graph {
+    //the index is id
     open var vertices = [Vertex]()
     lazy var nVertices:Int = {self.vertices.count}()
     lazy var nEdges:Int =

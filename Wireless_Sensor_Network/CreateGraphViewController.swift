@@ -33,6 +33,15 @@ class CreateGraphViewController: UIViewController {
             self.present(v, animated: true, completion: nil)
             return false
         }
+        if Int(avgDegreeText.text!) == nil || Int(nVerText.text!) == nil
+        {
+            let v = UIAlertController(title: "Invalid parameter", message: "Please modify your parameters.", preferredStyle: .alert)
+            let act = UIAlertAction(title: "return", style: .cancel, handler: nil)
+            v.addAction(act)
+            self.present(v, animated: true, completion: nil)
+            return false
+        }
+
         return true
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -77,10 +86,10 @@ class CreateGraphViewController: UIViewController {
             
             if let dest = (tab.viewControllers?[2] as? ChartsViewController)
             {
-                if let dis = g?.degreeDistribution
-                {
-                    dest.degreeDistriArray = dis
-                }
+                dest.degreeDistriArray = g?.degreeDistribution
+                dest.colorDistriArray = g?.colorDistribution
+                dest.degreeForVertex.original = g?.degreeForVertexArray
+                dest.degreeForVertex.delete = g?.degreeWhenDeleteArray
             }
             
             if let dest = (tab.viewControllers?[3] as? GraphInfoViewController)

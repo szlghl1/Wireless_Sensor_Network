@@ -14,6 +14,12 @@ open class RGG: Graph {
     //distance therehold for edge gernerating
     let radius:Float
     
+    //should be set in smallest last ordering
+    //the index is id
+    var degreeForVertexArray:[Int]?
+    var degreeWhenDeleteArray:[Int]?
+    
+    //the id of vertices in backbone are the same as orginal, but their index are different due to some vertices removed. Therefore the id in adjArray does not match the index
     lazy var twoBackbones: (b0VertexArray: [Vertex], b1VertexArray: [Vertex]) =
     {
         if(self.numColor < 4)
@@ -109,6 +115,10 @@ open class RGG: Graph {
     //the return stack contains dulipcate of vertices after smallest-last-order
     func getSmallestLastOrder() -> Stack<Vertex>
     {
+        //set in last stage, pushing vertex into stack
+        degreeForVertexArray = Array(repeating: 0, count: nVertices)
+        degreeWhenDeleteArray = Array(repeating: 0, count: nVertices)
+
         var s = Stack<Vertex>()
         var verticesIndex = [Vertex]()
         var maxDegree = 0
@@ -122,17 +132,17 @@ open class RGG: Graph {
             }
         }
         
-        var degreeArray = Array(repeating: [Vertex](), count: maxDegree + 1)
+        var degreeGroupWithArrayOfVertex = Array(repeating: [Vertex](), count: maxDegree + 1)
         for v in verticesIndex
         {
-            degreeArray[v.degree].append(v)
+            degreeGroupWithArrayOfVertex[v.degree].append(v)
         }
         
         let firstNonEmptyDegree = {
             () -> Int in
-            for i in 0...(degreeArray.count - 1)
+            for i in 0...(degreeGroupWithArrayOfVertex.count - 1)
             {
-                if(degreeArray[i].count > 0)
+                if(degreeGroupWithArrayOfVertex[i].count > 0)
                 {
                     return i
                 }
@@ -144,19 +154,24 @@ open class RGG: Graph {
             for i in v.adjArray
             {
                 let curAdjV = verticesIndex[i]
-                degreeArray[curAdjV.degree] = degreeArray[curAdjV.degree].filter({$0.id != curAdjV.id})
+                degreeGroupWithArrayOfVertex[curAdjV.degree] = degreeGroupWithArrayOfVertex[curAdjV.degree].filter({$0.id != curAdjV.id})
                 curAdjV.deleteAdjByID(v.id)
-                degreeArray[curAdjV.degree].append(curAdjV)
+                degreeGroupWithArrayOfVertex[curAdjV.degree].append(curAdjV)
             }
             return
         }
         for _ in 0...(vertices.count - 1)
         {
             let i = firstNonEmptyDegree()
-            let v = degreeArray[i][0]
+            let v = degreeGroupWithArrayOfVertex[i][0]
             removeVertex(v)
+            
+            //set degree distribution array
+            degreeForVertexArray![v.id] = self.vertices[v.id].degree
+            degreeWhenDeleteArray![v.id] = v.degree
+            
             s.push(v)
-            degreeArray[i].remove(at: 0)
+            degreeGroupWithArrayOfVertex[i].remove(at: 0)
         }
         return s
     }

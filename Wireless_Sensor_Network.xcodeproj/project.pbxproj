@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		452A43131DFCD2FE003B25B8 /* TabbarIconBone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 452A430F1DFCD2FE003B25B8 /* TabbarIconBone@2x.png */; };
+		452A43141DFCD2FE003B25B8 /* TabbarIconChart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 452A43101DFCD2FE003B25B8 /* TabbarIconChart@2x.png */; };
+		452A43151DFCD2FE003B25B8 /* TabbarIconImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 452A43111DFCD2FE003B25B8 /* TabbarIconImage@2x.png */; };
+		452A43161DFCD2FE003B25B8 /* TabbarIconInfo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 452A43121DFCD2FE003B25B8 /* TabbarIconInfo@2x.png */; };
 		455C09B41DFB8E6900790F50 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C09B31DFB8E6900790F50 /* Graph.swift */; };
 		455C09B61DFB9FEC00790F50 /* Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C09B51DFB9FEC00790F50 /* Draw.swift */; };
 		456025EE1DF7F7AF00E86E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */; };
@@ -85,6 +89,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		452A430F1DFCD2FE003B25B8 /* TabbarIconBone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabbarIconBone@2x.png"; path = "TabbarIcons/TabbarIconBone@2x.png"; sourceTree = "<group>"; };
+		452A43101DFCD2FE003B25B8 /* TabbarIconChart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabbarIconChart@2x.png"; path = "TabbarIcons/TabbarIconChart@2x.png"; sourceTree = "<group>"; };
+		452A43111DFCD2FE003B25B8 /* TabbarIconImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabbarIconImage@2x.png"; path = "TabbarIcons/TabbarIconImage@2x.png"; sourceTree = "<group>"; };
+		452A43121DFCD2FE003B25B8 /* TabbarIconInfo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "TabbarIconInfo@2x.png"; path = "TabbarIcons/TabbarIconInfo@2x.png"; sourceTree = "<group>"; };
 		455C09B31DFB8E6900790F50 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		455C09B51DFB9FEC00790F50 /* Draw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Draw.swift; sourceTree = "<group>"; };
 		456025EA1DF7F7AF00E86E1D /* Wireless_Sensor_Network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wireless_Sensor_Network.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +140,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452A43041DFCD1A0003B25B8 /* TabbarIcons */ = {
+			isa = PBXGroup;
+			children = (
+				452A430F1DFCD2FE003B25B8 /* TabbarIconBone@2x.png */,
+				452A43101DFCD2FE003B25B8 /* TabbarIconChart@2x.png */,
+				452A43111DFCD2FE003B25B8 /* TabbarIconImage@2x.png */,
+				452A43121DFCD2FE003B25B8 /* TabbarIconInfo@2x.png */,
+			);
+			name = TabbarIcons;
+			sourceTree = "<group>";
+		};
 		456025E11DF7F7AF00E86E1D = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +173,7 @@
 		456025EC1DF7F7AF00E86E1D /* Wireless_Sensor_Network */ = {
 			isa = PBXGroup;
 			children = (
+				452A43041DFCD1A0003B25B8 /* TabbarIcons */,
 				45C8F1B21DFA86C5001C3685 /* ViewController */,
 				4560260D1DF7F7E600E86E1D /* GraphModel */,
 				456025ED1DF7F7AF00E86E1D /* AppDelegate.swift */,
@@ -202,11 +222,11 @@
 		45C8F1B21DFA86C5001C3685 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */,
 				45C8F1B71DFA87CD001C3685 /* BackboneViewController.swift */,
+				45C8F1BD1DFA88FC001C3685 /* ChartsViewController.swift */,
 				45C8F1B91DFA88A8001C3685 /* GraphInfoViewController.swift */,
 				45C8F1BB1DFA88BD001C3685 /* CreateGraphViewController.swift */,
-				456025EF1DF7F7AF00E86E1D /* RGGViewController.swift */,
-				45C8F1BD1DFA88FC001C3685 /* ChartsViewController.swift */,
 				45C8F1BF1DFA8A2F001C3685 /* GraphShapeEnum.swift */,
 				455C09B51DFB9FEC00790F50 /* Draw.swift */,
 				45C321891DFC066A004AA363 /* TabBarViewController.swift */,
@@ -331,9 +351,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452A43161DFCD2FE003B25B8 /* TabbarIconInfo@2x.png in Resources */,
 				456025F81DF7F7AF00E86E1D /* LaunchScreen.storyboard in Resources */,
+				452A43141DFCD2FE003B25B8 /* TabbarIconChart@2x.png in Resources */,
 				456025F51DF7F7AF00E86E1D /* Assets.xcassets in Resources */,
+				452A43151DFCD2FE003B25B8 /* TabbarIconImage@2x.png in Resources */,
 				456025F31DF7F7AF00E86E1D /* Main.storyboard in Resources */,
+				452A43131DFCD2FE003B25B8 /* TabbarIconBone@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

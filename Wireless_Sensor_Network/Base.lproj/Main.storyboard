@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QSp-Wm-tkN" userLabel="Stack Edges">
-                                <rect key="frame" x="32" y="115" width="312" height="31"/>
+                                <rect key="frame" x="31.5" y="115" width="312" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Highlight Max/Min Degree Vertex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIC-K7-Uye">
                                         <rect key="frame" x="0.0" y="0.0" width="253" height="31"/>
@@ -78,7 +78,7 @@
                             <constraint firstAttribute="trailing" secondItem="OQc-t0-SlG" secondAttribute="trailing" id="ue3-FB-u62"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Graph" id="3dl-yT-Urb"/>
+                    <tabBarItem key="tabBarItem" title="Graph" image="TabbarIconImage.png" id="3dl-yT-Urb"/>
                     <connections>
                         <outlet property="highlightSwitch" destination="Lut-8T-Tkt" id="OpH-wx-DIV"/>
                         <outlet property="sceneView" destination="OQc-t0-SlG" id="rfE-bW-ovU"/>
@@ -206,7 +206,7 @@
                             <constraint firstItem="o5h-Uk-pSD" firstAttribute="leading" secondItem="AA4-K7-Zcb" secondAttribute="leading" id="t7C-bj-pX6"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Backbone" id="rWN-Ej-xSt" userLabel="Backbone"/>
+                    <tabBarItem key="tabBarItem" title="Backbone" image="TabbarIconBone.png" id="rWN-Ej-xSt" userLabel="Backbone"/>
                     <connections>
                         <outlet property="backboneView" destination="o5h-Uk-pSD" id="Rr3-zd-oTo"/>
                     </connections>
@@ -283,7 +283,7 @@
                             <constraint firstItem="30X-TE-g8C" firstAttribute="leading" secondItem="imX-XS-EJ1" secondAttribute="leading" id="jfU-BE-4vm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Charts" id="gj0-Ls-iky"/>
+                    <tabBarItem key="tabBarItem" title="Charts" image="TabbarIconInfo.png" id="gj0-Ls-iky"/>
                     <connections>
                         <outlet property="colorDistriView" destination="g28-jm-E1c" id="SQ9-mQ-uCa"/>
                         <outlet property="compareDegreeView" destination="FKt-hv-wYt" id="JnC-57-zpc"/>
@@ -347,4 +347,9 @@
             <point key="canvasLocation" x="32" y="688"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TabbarIconBone.png" width="25" height="25"/>
+        <image name="TabbarIconImage.png" width="25" height="25"/>
+        <image name="TabbarIconInfo.png" width="25" height="25"/>
+    </resources>
 </document>
