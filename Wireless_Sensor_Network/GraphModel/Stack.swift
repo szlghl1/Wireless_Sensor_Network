@@ -16,4 +16,7 @@ struct Stack<Element> {
     mutating func pop() -> Element {
         return items.removeLast()
     }
+    var isEmpty:Bool{
+        return items.isEmpty
+    }
 }

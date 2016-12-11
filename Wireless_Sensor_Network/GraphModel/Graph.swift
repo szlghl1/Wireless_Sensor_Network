@@ -29,9 +29,13 @@ open class Graph {
         var maxColor = 0
         for v in self.vertices
         {
-            if v.color > maxColor
+            if v.color == nil
             {
-                maxColor = v.color
+                continue
+            }
+            if v.color! > maxColor
+            {
+                maxColor = v.color!
             }
         }
         return maxColor + 1
@@ -86,7 +90,9 @@ open class Graph {
     lazy var colorDistribution:[Int] = {
         var res = [Int](repeating: 0, count: self.numColor)
         for v in self.vertices{
-            res[v.color] += 1
+            if (v.color != nil){
+                res[v.color!] += 1
+            }
         }
         return res
     }()
@@ -96,5 +102,8 @@ open class Graph {
             res[v.degree] += 1
         }
         return res
+    }()
+    lazy var maxColorSize:Int = {
+        return self.colorDistribution.max() ?? 0
     }()
 }

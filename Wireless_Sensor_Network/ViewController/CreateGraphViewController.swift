@@ -94,7 +94,33 @@ class CreateGraphViewController: UIViewController {
             
             if let dest = (tab.viewControllers?[3] as? GraphInfoViewController)
             {
-                dest.info = "Hello World"
+                dest.shape = shape
+                dest.numVertices = g?.nVertices ?? -1
+                dest.radius = g?.radius ?? -1
+                dest.numEdges = g?.nEdges ?? -1
+                dest.minDegree = g?.minDegree ?? -1
+                dest.avgDegree = g?.avgDegree ?? -1
+                dest.maxDegree = g?.maxDegree ?? -1
+                dest.maxDeleteDegree = g?.maxDeleteDegree ?? -1
+                dest.numColor = g?.numColor ?? -1
+                dest.maxColorSize = g?.maxColorSize ?? -1
+                dest.terminalCliqueSize = g?.degreeWhenDeleteArray.filter({$0 == g?.minDeleteDegree}).count ?? -1
+                let nEdgeInBackbone0:Int = {
+                    var res = 0
+                    if let b = g?.twoBackbones.b0VertexArray{
+                        for v in b{
+                            res += v.degree
+                        }
+                    }
+                    //return -1 to show it is not set, if res = 0, which means b is nil
+                    return res == 0 ? -1 : res / 2
+                }()
+                if let sg = g as? Sphere{
+                    let b = sg.twoBackbones.b0VertexArray
+                    var test = nEdgeInBackbone0 - b.count + 1//only for sphere
+                    dest.numFaces = test
+                }
+                dest.numEdgesLargestBipartite = nEdgeInBackbone0
             }
         }
     }

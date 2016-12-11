@@ -306,8 +306,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label for output info" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzi-37-fC3">
-                                <rect key="frame" x="10" y="74" width="580" height="477"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label for output info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzi-37-fC3">
+                                <rect key="frame" x="0.0" y="74" width="375" height="544"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -315,9 +315,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="kzi-37-fC3" secondAttribute="trailing" constant="-215" id="Bqi-eX-qrF"/>
-                            <constraint firstItem="N61-lF-tdp" firstAttribute="top" secondItem="kzi-37-fC3" secondAttribute="bottom" constant="67" id="EOr-ID-66v"/>
-                            <constraint firstItem="kzi-37-fC3" firstAttribute="leading" secondItem="2pR-oR-AbC" secondAttribute="leading" constant="10" id="Ydj-zg-eVK"/>
+                            <constraint firstAttribute="trailing" secondItem="kzi-37-fC3" secondAttribute="trailing" id="Bqi-eX-qrF"/>
+                            <constraint firstItem="N61-lF-tdp" firstAttribute="top" secondItem="kzi-37-fC3" secondAttribute="bottom" id="EOr-ID-66v"/>
+                            <constraint firstItem="kzi-37-fC3" firstAttribute="leading" secondItem="2pR-oR-AbC" secondAttribute="leading" id="Ydj-zg-eVK"/>
                             <constraint firstItem="kzi-37-fC3" firstAttribute="top" secondItem="k5t-rG-srq" secondAttribute="bottom" constant="10" id="wsM-Ay-vDA"/>
                         </constraints>
                     </view>

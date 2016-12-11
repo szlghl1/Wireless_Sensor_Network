@@ -10,9 +10,10 @@ import Foundation
 open class Vertex {
     open let x:Float, y:Float, z:Float
     open let id:Int
-    open var color:Int = 0
+    open var color:Int?
     open var adjArray = [Int]()
-    open var degree = 0
+    //degree is read-only derived attribute, no need to update
+    open var degree:Int {return adjArray.count}
     
     init(id:Int, x:Float, y:Float, z:Float = 0)
     {
@@ -27,9 +28,7 @@ open class Vertex {
         self.x = v.x; self.y = v.y; self.z = v.z;
         self.id = v.id
         self.color = v.color
-        self.adjArray = v.adjArray
-        self.degree = v.degree
-    }
+        self.adjArray = v.adjArray    }
     
     func copy() -> Vertex
     {
@@ -39,6 +38,5 @@ open class Vertex {
     func deleteAdjByID(_ id:Int)
     {
         self.adjArray = self.adjArray.filter({$0 != id})
-        self.degree -= 1
     }
 }

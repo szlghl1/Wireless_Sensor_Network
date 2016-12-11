@@ -43,7 +43,7 @@ class Draw {
     class func getSphereNode(_ v: Vertex) -> SCNNode
     {
         let sphere = SCNSphere(radius: 0.03)
-        sphere.firstMaterial?.diffuse.contents = getColor(v.color)
+        sphere.firstMaterial?.diffuse.contents = getColor(v.color ?? 0)
         let sphereNode = SCNNode(geometry: sphere)
         sphereNode.position = SCNVector3Make(v.x, v.y, v.z)
         return sphereNode

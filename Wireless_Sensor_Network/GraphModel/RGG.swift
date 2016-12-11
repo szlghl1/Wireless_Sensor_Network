@@ -15,9 +15,11 @@ open class RGG: Graph {
     let radius:Float
     
     //should be set in smallest last ordering
-    //the index is id
-    var degreeForVertexArray:[Int]?
-    var degreeWhenDeleteArray:[Int]?
+    //the index is the order it is deleted
+    var degreeForVertexArray:[Int] = [Int]()
+    var degreeWhenDeleteArray:[Int] = [Int]()
+    var maxDeleteDegree = 0
+    var minDeleteDegree = Int.max
     
     //the id of vertices in backbone are the same as orginal, but their index are different due to some vertices removed. Therefore the id in adjArray does not match the index
     lazy var twoBackbones: (b0VertexArray: [Vertex], b1VertexArray: [Vertex]) =
@@ -34,24 +36,67 @@ open class RGG: Graph {
         }
         for v in self.vertices
         {
-            colorArray[v.color].idArray.append(v.id)
+            if let c = v.color
+            {
+                colorArray[c].idArray.append(v.id)
+            }
         }
         colorArray.sort(by: {$0.idArray.count > $1.idArray.count})
         let b0IDs = colorArray[0].idArray + colorArray[1].idArray
         let b1IDs = colorArray[0].idArray + colorArray[2].idArray
         var b0 = [Vertex]()
         var b1 = [Vertex]()
+        var b0Dict = [Int:Vertex]()//key is id, ele is modified vertex
+        var b1Dict = [Int:Vertex]()
+        
         for i in b0IDs{
             let v = self.vertices[i].copy()
             v.adjArray = v.adjArray.filter({b0IDs.contains($0)})
             b0.append(v)
+            b0Dict[v.id] = v
         }
         for i in b1IDs{
             let v = self.vertices[i].copy()
             v.adjArray = v.adjArray.filter({b1IDs.contains($0)})
             b1.append(v)
+            b1Dict[v.id] = v
         }
-        return (b0, b1)
+        
+        //find the largest component by DFS
+        //only applicable to backbone defined here
+        func findLargestComponent(b:[Vertex], bDict:[Int:Vertex]) -> [Vertex]
+        {
+            //key is id, ele is if visited
+            var dictVisit = [Int:Bool]()
+            var components = [[Vertex]]()
+            var s = Stack<Vertex>()
+            for v in b{
+                if dictVisit[v.id] == nil{
+                    dictVisit[v.id] = true
+                    components.append([v])
+                }else{
+                    continue
+                }
+                s.push(v)
+                while !s.isEmpty{
+                    let curVertex = s.pop()
+                    //it is sure that it is invisited, because one of its connected vertex is invisited
+                    dictVisit[curVertex.id] = true
+                    components[components.count - 1].append(curVertex)
+                    for adjID in curVertex.adjArray{
+                        if dictVisit[adjID] == nil{
+                            s.push(bDict[adjID]!)
+                        }
+                    }
+                }
+            }
+            components.sort(by: {$0.count > $1.count})
+            return components[0]
+        }
+        
+        b0 = findLargestComponent(b: b0, bDict: b0Dict)
+        b1 = findLargestComponent(b: b1, bDict: b1Dict)
+        return (b0,b1)
     }()
     public init(avgDegree: Int, numberOfVertices: Int)
     {
@@ -93,8 +138,6 @@ open class RGG: Graph {
                     let id_j = copyVertices[j].id
                     vertices[id_i].adjArray.append(id_j)
                     vertices[id_j].adjArray.append(id_i)
-                    vertices[id_i].degree += 1
-                    vertices[id_j].degree += 1
                 }
                 j -= 1
             }
@@ -115,10 +158,6 @@ open class RGG: Graph {
     //the return stack contains dulipcate of vertices after smallest-last-order
     func getSmallestLastOrder() -> Stack<Vertex>
     {
-        //set in last stage, pushing vertex into stack
-        degreeForVertexArray = Array(repeating: 0, count: nVertices)
-        degreeWhenDeleteArray = Array(repeating: 0, count: nVertices)
-
         var s = Stack<Vertex>()
         var verticesIndex = [Vertex]()
         var maxDegree = 0
@@ -167,8 +206,11 @@ open class RGG: Graph {
             removeVertex(v)
             
             //set degree distribution array
-            degreeForVertexArray![v.id] = self.vertices[v.id].degree
-            degreeWhenDeleteArray![v.id] = v.degree
+            degreeForVertexArray.append(self.vertices[v.id].degree)
+            degreeWhenDeleteArray.append(v.degree)
+            //set maxDeleteDegree
+            maxDeleteDegree = max(maxDeleteDegree, v.degree)
+            minDeleteDegree = min(minDeleteDegree, v.degree)
             
             s.push(v)
             degreeGroupWithArrayOfVertex[i].remove(at: 0)
@@ -193,7 +235,10 @@ open class RGG: Graph {
             var usedColor = [Int]()
             for adjID in v.adjArray
             {
-                usedColor.append(self.vertices[adjID].color)
+                if let c = self.vertices[adjID].color
+                {
+                    usedColor.append(c)
+                }
             }
             usedColor.sort()
             for i in 0...usedColor.count - 1
@@ -203,7 +248,7 @@ open class RGG: Graph {
                     return i
                 }
             }
-            return usedColor.last!
+            return usedColor.isEmpty ? 0 : usedColor.last! + 1
         }
         for _ in 0...s.items.count - 1
         {

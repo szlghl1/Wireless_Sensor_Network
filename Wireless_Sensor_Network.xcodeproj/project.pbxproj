@@ -222,13 +222,13 @@
 		45C8F1B21DFA86C5001C3685 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				45590ADC1DFCF46A000B38F0 /* CreateGraphViewController.swift */,
+				45590AE01DFCF46A000B38F0 /* RGGViewController.swift */,
 				45590ADA1DFCF46A000B38F0 /* BackboneViewController.swift */,
 				45590ADB1DFCF46A000B38F0 /* ChartsViewController.swift */,
-				45590ADC1DFCF46A000B38F0 /* CreateGraphViewController.swift */,
-				45590ADD1DFCF46A000B38F0 /* Draw.swift */,
 				45590ADE1DFCF46A000B38F0 /* GraphInfoViewController.swift */,
+				45590ADD1DFCF46A000B38F0 /* Draw.swift */,
 				45590ADF1DFCF46A000B38F0 /* GraphShapeEnum.swift */,
-				45590AE01DFCF46A000B38F0 /* RGGViewController.swift */,
 				45590AE11DFCF46A000B38F0 /* TabBarViewController.swift */,
 			);
 			name = ViewController;
