@@ -69,11 +69,16 @@ class CreateGraphViewController: UIViewController {
             default:
                 break
             }
+            
+            print("preparing RGGView")
+            let t = NSDate()
             if let dest = (tab.viewControllers?[0] as? RGGViewController)
             {
                 dest.graphToDraw = g
             }
             
+            print("preparing BackboneView")
+            print("\(-t.timeIntervalSinceNow) seconds passed")
             if let dest = (tab.viewControllers?[1] as? BackboneViewController)
             {
                 if let twoBs = g?.twoBackbones
@@ -84,6 +89,8 @@ class CreateGraphViewController: UIViewController {
                 }
             }
             
+            print("preparing ChartsView")
+            print("\(-t.timeIntervalSinceNow) seconds passed")
             if let dest = (tab.viewControllers?[2] as? ChartsViewController)
             {
                 dest.degreeDistriArray = g?.degreeDistribution
@@ -92,6 +99,8 @@ class CreateGraphViewController: UIViewController {
                 dest.degreeForVertex.delete = g?.degreeWhenDeleteArray
             }
             
+            print("preparing InfoView")
+            print("\(-t.timeIntervalSinceNow) seconds passed")
             if let dest = (tab.viewControllers?[3] as? GraphInfoViewController)
             {
                 dest.shape = shape
@@ -104,7 +113,18 @@ class CreateGraphViewController: UIViewController {
                 dest.maxDeleteDegree = g?.maxDeleteDegree ?? -1
                 dest.numColor = g?.numColor ?? -1
                 dest.maxColorSize = g?.maxColorSize ?? -1
-                dest.terminalCliqueSize = g?.degreeWhenDeleteArray.filter({$0 == g?.minDeleteDegree}).count ?? -1
+                dest.terminalCliqueSize = {
+                    var res = 0
+                    if let dgrDltArr = g?.degreeWhenDeleteArray{
+                        for i in 0..<dgrDltArr.count{
+                            let j = dgrDltArr.count - i - 1
+                            if dgrDltArr[j] == i{
+                                res += 1
+                            }
+                        }
+                    }
+                    return res
+                }()
                 let nEdgeInBackbone0:Int = {
                     var res = 0
                     if let b = g?.twoBackbones.b0VertexArray{
@@ -115,12 +135,11 @@ class CreateGraphViewController: UIViewController {
                     //return -1 to show it is not set, if res = 0, which means b is nil
                     return res == 0 ? -1 : res / 2
                 }()
+                dest.numEdgesLargestBipartite = nEdgeInBackbone0
                 if let sg = g as? Sphere{
                     let b = sg.twoBackbones.b0VertexArray
-                    var test = nEdgeInBackbone0 - b.count + 1//only for sphere
-                    dest.numFaces = test
+                    dest.numFaces = nEdgeInBackbone0 - b.count + 1//only for sphere
                 }
-                dest.numEdgesLargestBipartite = nEdgeInBackbone0
             }
         }
     }

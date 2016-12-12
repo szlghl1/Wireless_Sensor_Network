@@ -41,6 +41,7 @@ open class RGG: Graph {
                 colorArray[c].idArray.append(v.id)
             }
         }
+        //generally number of color is small, so there is no big difference between O(nlgn) and O(n)
         colorArray.sort(by: {$0.idArray.count > $1.idArray.count})
         let b0IDs = colorArray[0].idArray + colorArray[1].idArray
         let b1IDs = colorArray[0].idArray + colorArray[2].idArray
@@ -49,6 +50,8 @@ open class RGG: Graph {
         var b0Dict = [Int:Vertex]()//key is id, ele is modified vertex
         var b1Dict = [Int:Vertex]()
         
+        let t = NSDate()
+        //the deep copy here is the most consuming part. improvment needed
         for i in b0IDs{
             let v = self.vertices[i].copy()
             v.adjArray = v.adjArray.filter({b0IDs.contains($0)})
@@ -61,6 +64,7 @@ open class RGG: Graph {
             b1.append(v)
             b1Dict[v.id] = v
         }
+        print("\(-t.timeIntervalSinceNow)s used for deep copy vertices array.")
         
         //find the largest component by DFS
         //only applicable to backbone defined here
@@ -90,12 +94,14 @@ open class RGG: Graph {
                     }
                 }
             }
-            components.sort(by: {$0.count > $1.count})
-            return components[0]
+            return components.max(by: {$0.count < $1.count})!
         }
         
         b0 = findLargestComponent(b: b0, bDict: b0Dict)
         b1 = findLargestComponent(b: b1, bDict: b1Dict)
+        if b0.count < b1.count{
+            return (b1, b0)
+        }
         return (b0,b1)
     }()
 
@@ -107,9 +113,13 @@ open class RGG: Graph {
         }
         radius = r
         super.init()
+        print("creating vertices")
         createVertices(numberOfVertices)
+        print("creating edges")
         createEdges()
+        print("coloring")
         color()
+        print("finished coloring")
     }
     
     func createVertices(_ nV: Int)
@@ -160,12 +170,12 @@ open class RGG: Graph {
     func getSmallestLastOrder() -> Stack<Vertex>
     {
         var s = Stack<Vertex>()
-        var verticesIndex = [Vertex]()
+        var copiedVerticesArrayByID = [Vertex]()
         var maxDegree = 0
         //initialize maxDegree and verticesIndex
         for v in vertices
         {
-            verticesIndex.append(v.copy())
+            copiedVerticesArrayByID.append(v.copy())
             if(v.degree > maxDegree)
             {
                 maxDegree = v.degree
@@ -173,7 +183,7 @@ open class RGG: Graph {
         }
         
         var degreeGroupWithArrayOfVertex = Array(repeating: [Vertex](), count: maxDegree + 1)
-        for v in verticesIndex
+        for v in copiedVerticesArrayByID
         {
             degreeGroupWithArrayOfVertex[v.degree].append(v)
         }
@@ -191,9 +201,12 @@ open class RGG: Graph {
         }
         let removeVertex = {
             (v: Vertex) in
+            //remove it from degree group
+            degreeGroupWithArrayOfVertex[v.degree] = degreeGroupWithArrayOfVertex[v.degree].filter({$0.id != v.id})
+            //delete it from its neighbors' adjList
             for i in v.adjArray
             {
-                let curAdjV = verticesIndex[i]
+                let curAdjV = copiedVerticesArrayByID[i]
                 degreeGroupWithArrayOfVertex[curAdjV.degree] = degreeGroupWithArrayOfVertex[curAdjV.degree].filter({$0.id != curAdjV.id})
                 curAdjV.deleteAdjByID(v.id)
                 degreeGroupWithArrayOfVertex[curAdjV.degree].append(curAdjV)
@@ -214,7 +227,6 @@ open class RGG: Graph {
             minDeleteDegree = min(minDeleteDegree, v.degree)
             
             s.push(v)
-            degreeGroupWithArrayOfVertex[i].remove(at: 0)
         }
         return s
     }
@@ -229,27 +241,43 @@ open class RGG: Graph {
         let firstAvalibleColor =
         {
             (v: Vertex) -> Int in
-            if v.adjArray.count == 0
+            if v.adjArray.isEmpty
             {
                 return 0
             }
-            var usedColor = [Int]()
-            for adjID in v.adjArray
+            var maxAdjColor = 0;
+            for id in v.adjArray
             {
-                if let c = self.vertices[adjID].color
+                if let c = self.vertices[id].color
                 {
-                    usedColor.append(c)
+                    maxAdjColor = (c > maxAdjColor) ? c : maxAdjColor;
                 }
             }
-            usedColor.sort()
-            for i in 0...usedColor.count - 1
+            var usedColor = Array(repeating: false, count: maxAdjColor+1)
+            for id in v.adjArray
             {
-                if usedColor[i] != i
+                if let c = self.vertices[id].color
                 {
-                    return i
+                    usedColor[c] = true
                 }
             }
-            return usedColor.isEmpty ? 0 : usedColor.last! + 1
+            
+            var minAvailableColor = 0
+            for (i, ele) in usedColor.enumerated()
+            {
+
+                if ele == false
+                {
+                    minAvailableColor = i
+                    break
+                }
+                if i == usedColor.count - 1//even the last is true (all true)
+                {
+                    minAvailableColor = usedColor.count
+                    break
+                }
+            }
+            return minAvailableColor
         }
         for _ in 0...s.items.count - 1
         {
