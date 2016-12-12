@@ -79,6 +79,41 @@ class CreateGraphViewController: UIViewController {
             
             print("preparing BackboneView")
             print("\(-t.timeIntervalSinceNow) seconds passed")
+            let countEdgeInBackbone:([Vertex]?) -> Int = {
+                vArr in
+                if vArr == nil{
+                    return -1
+                }
+                var res = 0
+                for v in vArr!{
+                    res += v.degree
+                }
+                return res / 2
+            }
+            let dominationOfBackbone:([Vertex]?) -> Float = {
+                vArr in
+                if vArr == nil{
+                    return -1
+                }
+                var res:Float = 0
+                var s = Set<Int>()
+                for v in vArr!{
+                    for adjID in v.adjArray{
+                        s.insert(adjID)
+                    }
+                }
+                if let c = g?.vertices.count{
+                    res = Float(s.count) / Float(c)
+                }
+                return res
+            }
+            let nEdgeInBackbone0:Int = countEdgeInBackbone(g?.twoBackbones.b0VertexArray)
+            
+            let nEdgeInBackbone1:Int = countEdgeInBackbone(g?.twoBackbones.b1VertexArray)
+            
+            let dominationRateB0 = dominationOfBackbone(g?.twoBackbones.b0VertexArray)
+            let dominationRateB1 = dominationOfBackbone(g?.twoBackbones.b1VertexArray)
+                
             if let dest = (tab.viewControllers?[1] as? BackboneViewController)
             {
                 if let twoBs = g?.twoBackbones
@@ -86,6 +121,8 @@ class CreateGraphViewController: UIViewController {
                     dest.backbone0 = twoBs.b0VertexArray
                     dest.backbone1 = twoBs.b1VertexArray
                     dest.shape = shape
+                    dest.b0Info = String("# of vertices = \(twoBs.b0VertexArray.count)\n# of edges = \(nEdgeInBackbone0)\ndomination rate = \(dominationRateB0)")
+                    dest.b1Info = String("# of vertices = \(twoBs.b1VertexArray.count)\n# of edges = \(nEdgeInBackbone1)\ndomination rate = \(dominationRateB1)")
                 }
             }
             
@@ -124,16 +161,6 @@ class CreateGraphViewController: UIViewController {
                         }
                     }
                     return res
-                }()
-                let nEdgeInBackbone0:Int = {
-                    var res = 0
-                    if let b = g?.twoBackbones.b0VertexArray{
-                        for v in b{
-                            res += v.degree
-                        }
-                    }
-                    //return -1 to show it is not set, if res = 0, which means b is nil
-                    return res == 0 ? -1 : res / 2
                 }()
                 dest.numEdgesLargestBipartite = nEdgeInBackbone0
                 if let sg = g as? Sphere{

@@ -31,7 +31,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lut-8T-Tkt">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lut-8T-Tkt">
                                         <rect key="frame" x="263" y="0.0" width="51" height="31"/>
                                         <connections>
                                             <action selector="highlightSwitchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="VbB-5h-j70"/>
@@ -195,6 +195,12 @@
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5h-Uk-pSD">
                                 <rect key="frame" x="0.0" y="112" width="375" height="506"/>
                             </sceneKitView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info of backbones" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBm-Su-9ys">
+                                <rect key="frame" x="16" y="124" width="137.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -202,13 +208,16 @@
                             <constraint firstItem="o5h-Uk-pSD" firstAttribute="top" secondItem="kjm-wr-n7b" secondAttribute="bottom" constant="10" id="RU2-hq-PlM"/>
                             <constraint firstItem="kjm-wr-n7b" firstAttribute="centerX" secondItem="AA4-K7-Zcb" secondAttribute="centerX" id="RkF-n4-JBM"/>
                             <constraint firstItem="uT3-wq-HXB" firstAttribute="top" secondItem="o5h-Uk-pSD" secondAttribute="bottom" id="V5S-Pi-QZJ"/>
+                            <constraint firstItem="cBm-Su-9ys" firstAttribute="top" secondItem="hND-AJ-OEQ" secondAttribute="bottom" constant="60" id="YXZ-LF-O41"/>
                             <constraint firstAttribute="trailing" secondItem="o5h-Uk-pSD" secondAttribute="trailing" id="bxW-uZ-Tet"/>
+                            <constraint firstItem="cBm-Su-9ys" firstAttribute="leading" secondItem="AA4-K7-Zcb" secondAttribute="leadingMargin" id="dbj-MC-8Hy"/>
                             <constraint firstItem="o5h-Uk-pSD" firstAttribute="leading" secondItem="AA4-K7-Zcb" secondAttribute="leading" id="t7C-bj-pX6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Backbone" image="TabbarIconBone.png" id="rWN-Ej-xSt" userLabel="Backbone"/>
                     <connections>
                         <outlet property="backboneView" destination="o5h-Uk-pSD" id="Rr3-zd-oTo"/>
+                        <outlet property="infoLabel" destination="cBm-Su-9ys" id="yHd-e3-u5c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uTR-Ul-MPf" userLabel="First Responder" sceneMemberID="firstResponder"/>

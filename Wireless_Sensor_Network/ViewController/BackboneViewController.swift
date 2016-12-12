@@ -13,6 +13,8 @@ class BackboneViewController: UIViewController {
     var backbone0: [Vertex]?
     var backbone1: [Vertex]?
     var shape: GraphShapeEnum?
+    var b0Info:String?
+    var b1Info:String?
     
     var rForDrawSphere:Float = 0.03
     
@@ -27,16 +29,21 @@ class BackboneViewController: UIViewController {
         if sender.selectedSegmentIndex == 0{
             b1Node.removeFromParentNode()
             nodeForOffset.addChildNode(b0Node)
+            infoLabel.text = b0Info
         }else{
             b0Node.removeFromParentNode()
             nodeForOffset.addChildNode(b1Node)
+            infoLabel.text = b1Info
         }
     }
     @IBOutlet weak var backboneView: SCNView!
     
+    @IBOutlet weak var infoLabel: UILabel!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        infoLabel.text = b0Info
         if shape == .square{
             //area of square is half smaller
             nodeForOffset.scale = SCNVector3Make(2, 2, 2)

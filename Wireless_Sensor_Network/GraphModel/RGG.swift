@@ -77,7 +77,7 @@ open class RGG: Graph {
             for v in b{
                 if dictVisit[v.id] == nil{
                     dictVisit[v.id] = true
-                    components.append([v])
+                    components.append([Vertex]())
                 }else{
                     continue
                 }
