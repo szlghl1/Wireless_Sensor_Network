@@ -14,13 +14,14 @@ class RGGViewController: UIViewController {
     @IBOutlet weak var sceneView: SCNView!
     
     var graphToDraw:RGG?
+    var rForDrawSphere:Float = 0.03
     let nodeForLine = SCNNode()//all lines are under this node
     let nodeForOffset = SCNNode()//all edges and sphere are under this node
     lazy var nodeForHighlight:SCNNode = {
         let minV = self.graphToDraw!.minVertex
         let maxV = self.graphToDraw!.maxVertex
         let n = SCNNode()
-        let sphere = SCNSphere(radius: 0.1)
+        let sphere = SCNSphere(radius: CGFloat(3 * self.rForDrawSphere))
         sphere.firstMaterial?.diffuse.contents = UIColor.white
         let sphereNode1 = SCNNode(geometry: sphere)
         sphereNode1.position = SCNVector3Make(minV.x, minV.y, minV.z)
@@ -87,14 +88,18 @@ class RGGViewController: UIViewController {
 
         if let _ = graphToDraw as? Square
         {
-            offset = SCNVector3Make(-0.5, -0.5, 0)
+            //area of square is half smaller
+            nodeForOffset.scale = SCNVector3Make(2, 2, 2)
+            //2 * 0.5 = 1
+            offset = SCNVector3Make(-1, -1, 0)
+            rForDrawSphere = 0.015
         }
         nodeForOffset.position = offset
         sceneInstance.rootNode.addChildNode(nodeForOffset)
         
         for v in graphToDraw!.vertices
         {
-            let sphereNode = Draw.getSphereNode(v)
+            let sphereNode = Draw.getSphereNode(v, r: rForDrawSphere)
             nodeForOffset.addChildNode(sphereNode)
             for i in v.adjArray
             {

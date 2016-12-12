@@ -40,9 +40,9 @@ class Draw {
     }
     
     //the size is fixed. highlight vertices should be draw in another way
-    class func getSphereNode(_ v: Vertex) -> SCNNode
+    class func getSphereNode(_ v: Vertex, r: Float) -> SCNNode
     {
-        let sphere = SCNSphere(radius: 0.03)
+        let sphere = SCNSphere(radius: CGFloat(r))
         sphere.firstMaterial?.diffuse.contents = getColor(v.color ?? 0)
         let sphereNode = SCNNode(geometry: sphere)
         sphereNode.position = SCNVector3Make(v.x, v.y, v.z)

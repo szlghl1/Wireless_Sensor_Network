@@ -14,6 +14,8 @@ class BackboneViewController: UIViewController {
     var backbone1: [Vertex]?
     var shape: GraphShapeEnum?
     
+    var rForDrawSphere:Float = 0.03
+    
     let b0Node = SCNNode()
     let b1Node = SCNNode()
     
@@ -35,10 +37,14 @@ class BackboneViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        initSCNNodeForBackbone()
         if shape == .square{
-            nodeForOffset.position = SCNVector3Make(-0.5, -0.5, 0)
+            //area of square is half smaller
+            nodeForOffset.scale = SCNVector3Make(2, 2, 2)
+            //1 = 2 * 0.5
+            nodeForOffset.position = SCNVector3Make(-1, -1, 0)
+            rForDrawSphere = 0.015
         }
+        initSCNNodeForBackbone()
         nodeForOffset.addChildNode(b0Node)
 
         glLineWidth(2)
@@ -72,7 +78,7 @@ class BackboneViewController: UIViewController {
         {
             for v in b {
                 dIDToV[v.id] = v
-                let n = Draw.getSphereNode(v)
+                let n = Draw.getSphereNode(v, r: rForDrawSphere)
                 b0Node.addChildNode(n)
             }
             for v in b{
@@ -87,7 +93,7 @@ class BackboneViewController: UIViewController {
         {
             for v in b {
                 dIDToV[v.id] = v
-                let n = Draw.getSphereNode(v)
+                let n = Draw.getSphereNode(v, r: rForDrawSphere)
                 b1Node.addChildNode(n)
             }
             for v in b{
