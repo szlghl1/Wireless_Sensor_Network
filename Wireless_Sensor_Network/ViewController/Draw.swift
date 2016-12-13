@@ -10,7 +10,7 @@ import Foundation
 import SceneKit
 
 class Draw {
-    private static var colorMap = [Int: UIColor]()
+    private static var colorMap:[Int: UIColor] = [0:UIColor(red:115/255,green:235/255,blue:174/255,alpha:1),1:UIColor(red:65/255,green:179/255,blue:247/255,alpha:1),2:UIColor(red:0.5,green:0.5,blue:1,alpha:1)]
     private static var geoDict = [Int: SCNGeometry]()//the key is color
     
     class func getColor(_ id: Int) -> UIColor
