@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -54,10 +53,10 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMT-37-8Bb">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pMT-37-8Bb">
                                         <rect key="frame" x="263" y="0.0" width="51" height="31"/>
                                         <connections>
-                                            <action selector="edgeSwitchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="wtq-yl-XUH"/>
+                                            <action selector="edgeSwitchChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="GcB-hp-phJ"/>
                                         </connections>
                                     </switch>
                                 </subviews>
@@ -82,6 +81,7 @@
                     <connections>
                         <outlet property="highlightSwitch" destination="Lut-8T-Tkt" id="OpH-wx-DIV"/>
                         <outlet property="sceneView" destination="OQc-t0-SlG" id="rfE-bW-ovU"/>
+                        <outlet property="showEdgeSwitch" destination="pMT-37-8Bb" id="929-j7-Rq7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -316,7 +316,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label for output info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzi-37-fC3">
-                                <rect key="frame" x="0.0" y="74" width="375" height="544"/>
+                                <rect key="frame" x="16" y="74" width="343" height="544"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -324,9 +324,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="kzi-37-fC3" secondAttribute="trailing" id="Bqi-eX-qrF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kzi-37-fC3" secondAttribute="trailing" id="4sX-hG-iLn"/>
                             <constraint firstItem="N61-lF-tdp" firstAttribute="top" secondItem="kzi-37-fC3" secondAttribute="bottom" id="EOr-ID-66v"/>
-                            <constraint firstItem="kzi-37-fC3" firstAttribute="leading" secondItem="2pR-oR-AbC" secondAttribute="leading" id="Ydj-zg-eVK"/>
+                            <constraint firstItem="kzi-37-fC3" firstAttribute="leading" secondItem="2pR-oR-AbC" secondAttribute="leadingMargin" id="dB4-jp-6FT"/>
                             <constraint firstItem="kzi-37-fC3" firstAttribute="top" secondItem="k5t-rG-srq" secondAttribute="bottom" constant="10" id="wsM-Ay-vDA"/>
                         </constraints>
                     </view>

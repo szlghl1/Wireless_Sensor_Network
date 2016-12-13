@@ -16,7 +16,7 @@ class BackboneViewController: UIViewController {
     var b0Info:String?
     var b1Info:String?
     
-    var rForDrawSphere:Float = 0.03
+    var rForDrawSphere:Float = 0.02
     
     let b0Node = SCNNode()
     let b1Node = SCNNode()
@@ -44,12 +44,13 @@ class BackboneViewController: UIViewController {
     {
         super.viewDidLoad()
         infoLabel.text = b0Info
+        
         if shape == .square{
             //area of square is half smaller
             nodeForOffset.scale = SCNVector3Make(2, 2, 2)
             //1 = 2 * 0.5
             nodeForOffset.position = SCNVector3Make(-1, -1, 0)
-            rForDrawSphere = 0.015
+            rForDrawSphere /= 2
         }
         initSCNNodeForBackbone()
         nodeForOffset.addChildNode(b0Node)
@@ -72,6 +73,7 @@ class BackboneViewController: UIViewController {
         
         backboneView.scene = sceneInstance
         backboneView.autoenablesDefaultLighting = true
+ 
     }
 
     override func didReceiveMemoryWarning() {
@@ -83,6 +85,7 @@ class BackboneViewController: UIViewController {
         var dIDToV = [Int:Vertex]()
         if let b = backbone0
         {
+            var edgeCoorArray = [(fromV: Vertex, toV: Vertex)]()
             for v in b {
                 dIDToV[v.id] = v
                 let n = Draw.getSphereNode(v, r: rForDrawSphere)
@@ -90,14 +93,16 @@ class BackboneViewController: UIViewController {
             }
             for v in b{
                 for adjID in v.adjArray{
-                    let l = Draw.getLineNode(v, v2: dIDToV[adjID]!)
-                    b0Node.addChildNode(l)
+                    edgeCoorArray.append((v, dIDToV[adjID]!))
                 }
             }
+            let ln = Draw.getLinesNode(pathTupleArr: edgeCoorArray)
+            b0Node.addChildNode(ln)
         }
         
         if let b = backbone1
         {
+            var edgeCoorArray = [(fromV: Vertex, toV: Vertex)]()
             for v in b {
                 dIDToV[v.id] = v
                 let n = Draw.getSphereNode(v, r: rForDrawSphere)
@@ -105,10 +110,11 @@ class BackboneViewController: UIViewController {
             }
             for v in b{
                 for adjID in v.adjArray{
-                    let l = Draw.getLineNode(v, v2: dIDToV[adjID]!)
-                    b1Node.addChildNode(l)
+                    edgeCoorArray.append((v, dIDToV[adjID]!))
                 }
             }
+            let ln = Draw.getLinesNode(pathTupleArr: edgeCoorArray)
+            b1Node.addChildNode(ln)
         }
     }
     /*

@@ -50,21 +50,24 @@ open class RGG: Graph {
         var b0Dict = [Int:Vertex]()//key is id, ele is modified vertex
         var b1Dict = [Int:Vertex]()
         
-        let t = NSDate()
-        //the deep copy here is the most consuming part. improvment needed
         for i in b0IDs{
             let v = self.vertices[i].copy()
-            v.adjArray = v.adjArray.filter({b0IDs.contains($0)})
             b0.append(v)
-            b0Dict[v.id] = v
+            b0Dict[i] = v
         }
         for i in b1IDs{
             let v = self.vertices[i].copy()
-            v.adjArray = v.adjArray.filter({b1IDs.contains($0)})
             b1.append(v)
-            b1Dict[v.id] = v
+            b1Dict[i] = v
         }
-        print("\(-t.timeIntervalSinceNow)s used for deep copy vertices array.")
+        //filter by dict is O(1), filter by array is O(n)
+        //so we have to filter here in a new loop
+        for v in b0{
+            v.adjArray = v.adjArray.filter({b0Dict[$0] != nil})
+        }
+        for v in b1{
+            v.adjArray = v.adjArray.filter({b1Dict[$0] != nil})
+        }
         
         //find the largest component by DFS
         //only applicable to backbone defined here
@@ -136,7 +139,7 @@ open class RGG: Graph {
         }
         var copyVertices = vertices.sorted(by: {$0.x < $1.x})
         let window = radius
-        for i in 1...(copyVertices.count-1)
+        for i in 1..<copyVertices.count
         {
             let curX = copyVertices[i].x
             var j = i - 1

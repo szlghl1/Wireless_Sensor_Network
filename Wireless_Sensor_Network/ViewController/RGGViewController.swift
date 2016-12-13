@@ -10,12 +10,13 @@ import UIKit
 import SceneKit
 
 class RGGViewController: UIViewController {
+    @IBOutlet weak var showEdgeSwitch: UISwitch!
     @IBOutlet weak var highlightSwitch: UISwitch!
     @IBOutlet weak var sceneView: SCNView!
     
     var graphToDraw:RGG?
-    var rForDrawSphere:Float = 0.03
-    let nodeForLine = SCNNode()//all lines are under this node
+    var rForDrawSphere:Float = 0.02
+    var nodeForLine:SCNNode?//all lines are under this node
     let nodeForOffset = SCNNode()//all edges and sphere are under this node
     lazy var nodeForHighlight:SCNNode = {
         let minV = self.graphToDraw!.minVertex
@@ -34,8 +35,7 @@ class RGGViewController: UIViewController {
     
     
     @IBAction func highlightSwitchChange(_ sender: UISwitch) {
-        if sender.isOn
-        {
+        if sender.isOn{
             nodeForOffset.addChildNode(nodeForHighlight)
         }else{
             nodeForHighlight.removeFromParentNode()
@@ -43,20 +43,22 @@ class RGGViewController: UIViewController {
     }
     
     @IBAction func edgeSwitchChange(_ sender: UISwitch) {
-        if sender.isOn
-        {
-            nodeForOffset.addChildNode(nodeForLine)
+        if sender.isOn{
+            if nodeForLine == nil{
+                initLineNode()
+            }
+            nodeForOffset.addChildNode(nodeForLine!)
         }
-        if !sender.isOn
-        {
-            nodeForLine.removeFromParentNode()
+        if !sender.isOn{
+            nodeForLine?.removeFromParentNode()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nodeForOffset.addChildNode(nodeForLine)
-        draw()
+        //the edgeSwitch shoule be off at the beginning
+        doFirst()
+        initVertexNode()
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,7 +66,36 @@ class RGGViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func draw()
+    func initVertexNode(){
+        if graphToDraw == nil
+        {
+            return
+        }
+        for v in graphToDraw!.vertices
+        {
+            let sphereNode = Draw.getSphereNode(v, r: rForDrawSphere)
+            nodeForOffset.addChildNode(sphereNode)
+        }
+    }
+    func initLineNode(){
+        nodeForLine = SCNNode()
+        if graphToDraw == nil
+        {
+            return
+        }
+        var linePathArray = [(Vertex, Vertex)]()
+        for v in graphToDraw!.vertices
+        {
+            for i in v.adjArray
+            {
+                let adjV = graphToDraw!.vertices[i]
+                linePathArray.append((v, adjV))
+            }
+        }
+        let n = Draw.getLinesNode(pathTupleArr: linePathArray)
+        nodeForLine!.addChildNode(n)
+    }
+    func doFirst()
     {
         if graphToDraw == nil
         {
@@ -92,26 +123,12 @@ class RGGViewController: UIViewController {
             nodeForOffset.scale = SCNVector3Make(2, 2, 2)
             //2 * 0.5 = 1
             offset = SCNVector3Make(-1, -1, 0)
-            rForDrawSphere = 0.015
+            rForDrawSphere /= 2
         }
         nodeForOffset.position = offset
         sceneInstance.rootNode.addChildNode(nodeForOffset)
-        
-        for v in graphToDraw!.vertices
-        {
-            let sphereNode = Draw.getSphereNode(v, r: rForDrawSphere)
-            nodeForOffset.addChildNode(sphereNode)
-            for i in v.adjArray
-            {
-                let adjV = graphToDraw!.vertices[i]
-                let lineNode = Draw.getLineNode(v, v2: adjV)
-                nodeForLine.addChildNode(lineNode)
-            }
-        }
-        
+                
         sceneView.scene = sceneInstance
         sceneView.autoenablesDefaultLighting = true
     }
-
-    
 }

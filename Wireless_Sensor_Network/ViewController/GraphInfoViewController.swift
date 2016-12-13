@@ -53,7 +53,7 @@ class GraphInfoViewController: UIViewController {
         info += "# of edges in the largest bipartite = " + String(describing: numEdgesLargestBipartite) + "\n"
         //only sphere has this property
         if shape == .sphere{
-            info += "Number of faces in the largest backbone = " + String(describing: numFaces) + "\n"
+            info += "# of faces in the largest backbone = " + String(describing: numFaces) + "\n"
         }
     }
     /*

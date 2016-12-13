@@ -41,6 +41,23 @@ class CreateGraphViewController: UIViewController {
             self.present(v, animated: true, completion: nil)
             return false
         }
+        if let avgD = Int(avgDegreeText.text!), let nV = Int(nVerText.text!)
+        {
+            if nV > 70000 || avgD > 130{
+                let v = UIAlertController(title: "Too large parameter", message: "It may run forever. Please modify your parameters.", preferredStyle: .alert)
+                let act = UIAlertAction(title: "return", style: .cancel, handler: nil)
+                v.addAction(act)
+                self.present(v, animated: true, completion: nil)
+                return false
+            }
+            if avgD > nV || nV < 1{
+                let v = UIAlertController(title: "Invalid parameter", message: "Please modify your parameters.", preferredStyle: .alert)
+                let act = UIAlertAction(title: "return", style: .cancel, handler: nil)
+                v.addAction(act)
+                self.present(v, animated: true, completion: nil)
+                return false
+            }
+        }
 
         return true
     }
@@ -121,8 +138,8 @@ class CreateGraphViewController: UIViewController {
                     dest.backbone0 = twoBs.b0VertexArray
                     dest.backbone1 = twoBs.b1VertexArray
                     dest.shape = shape
-                    dest.b0Info = String("# of vertices = \(twoBs.b0VertexArray.count)\n# of edges = \(nEdgeInBackbone0)\ndomination rate = \(dominationRateB0)")
-                    dest.b1Info = String("# of vertices = \(twoBs.b1VertexArray.count)\n# of edges = \(nEdgeInBackbone1)\ndomination rate = \(dominationRateB1)")
+                    dest.b0Info = String("# of vertices = \(twoBs.b0VertexArray.count)\n# of edges = \(nEdgeInBackbone0)\ndomination rate = \(dominationRateB0 * 100)%")
+                    dest.b1Info = String("# of vertices = \(twoBs.b1VertexArray.count)\n# of edges = \(nEdgeInBackbone1)\ndomination rate = \(dominationRateB1 * 100)%")
                 }
             }
             
