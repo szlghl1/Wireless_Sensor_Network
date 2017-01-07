@@ -8,11 +8,11 @@ Part III is bipartite selection
 It includes RGG and bipartite visulization, statistical information and charts display.
 
 ##Screenshots
-<img src="https://raw.githubusercontent.com/szlghl1/Wireless_Sensor_Network/master/images/RGG.png" width="300">
-<img src="https://raw.githubusercontent.com/szlghl1/Wireless_Sensor_Network/master/images/Backbone1.png" width="300">
-<img src="https://raw.githubusercontent.com/szlghl1/Wireless_Sensor_Network/master/images/Backbone2.png" width="300">
-<img src="https://raw.githubusercontent.com/szlghl1/Wireless_Sensor_Network/master/images/Charts.png" width="300">
-<img src="https://raw.githubusercontent.com/szlghl1/Wireless_Sensor_Network/master/images/Statistics.png" width="300">
+<img src="https://raw.githubusercontent.com/szlghl1/Wireless_Sensor_Network/master/images/RGG.png" width="250">
+<img src="https://raw.githubusercontent.com/szlghl1/Wireless_Sensor_Network/master/images/Backbone1.png" width="250">
+<img src="https://raw.githubusercontent.com/szlghl1/Wireless_Sensor_Network/master/images/Backbone2.png" width="250">
+<img src="https://raw.githubusercontent.com/szlghl1/Wireless_Sensor_Network/master/images/Charts.png" width="250">
+<img src="https://raw.githubusercontent.com/szlghl1/Wireless_Sensor_Network/master/images/Statistics.png" width="250">
 
 ##Dependency
 - Charts
